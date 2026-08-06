@@ -33,6 +33,12 @@ df = ak.stock_zh_a_hist(
 # 返回格式: data.{symbol}.qfqday = [[date, open, close, high, low, volume, amount], ...]
 ```
 
+**腾讯接口格式注意（实测）**：
+- K线数组元素顺序：`[date, open, close, high, low, volume, (amount)]`
+- **除权日**的行会额外带第7个元素为 **dict**（如 `{'nd':'2023','fh_sh':'7.19','djr':'...','FHcontent':'10派7.19元'}`）
+- 解析时必须判断：`len(k) > 6 and isinstance(k[6], (int, float, str))` 才取为 amount，否则置0
+- 指数K线（如 `sh000001`）取 `day` 键（非 qfqday），无 amount 字段
+
 ### 1.2 AKShare返回的DataFrame列映射
 
 | AKShare原始列名 | 标准列名 | 类型 |

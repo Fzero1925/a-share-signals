@@ -6,6 +6,32 @@
 
 ---
 
+## 实现状态（2026-08-07 更新）
+
+**✅ 全部8步已完成并推送**（commit `1934cb5`，仓库 `Fzero1925/a-share-signals`）
+
+### 实际开发中与本文档的偏差（已同步到代码）
+
+| 项 | 文档原方案 | 实际实现 | 原因 |
+|----|-----------|----------|------|
+| 技术指标库 | pandas-ta | **纯pandas手写**（`core/indicators.py`） | pandas-ta 在 PyPI 无 Python 3.11 可用版本 |
+| 数据主源 | AKShare东财 `stock_zh_a_hist` | **腾讯接口** `web.ifzq.gtimg.cn/appstock/app/fqkline/get`，东财作备用 | 东财接口在本机 TLS 指纹风控下间歇性连接失败 |
+| 腾讯K线解析 | 无 | 需处理除权日第7元素为dict的情况 | 实测发现，见 DATA_LAYER.md |
+| 指数数据 | `ak.stock_zh_index_daily` | 腾讯接口 `day` 键 | 与股票同源，稳定 |
+| 回测资金 | 10万 | 集成测试用100万（高价股买不起1手） | 茅台1500元×100股=15万/笔 |
+
+### 代码结构变更说明
+- `core/strategy_engine.py`：实现 `STRATEGY_REGISTRY` 字典 + `get_strategy()`
+- `strategies/multi_factor.py`：实现为 `MultiStockStrategy` 子类（接收多股票dict）
+- `core/strategy_base.py`：同时定义 `BaseStrategy`（单股）和 `MultiStockStrategy`（多股）两个基类
+- CI 脚本实测通过：`python ci/run_signals.py` 生成 `signals/latest.json`，`python ci/generate_report.py` 生成 `public/index.html`
+
+### 待验证事项
+- [ ] GitHub Actions 定时任务首次运行（已触发 workflow_dispatch，排队中）
+- [ ] GitHub Pages 首次部署（Settings → Pages → Source: GitHub Actions）
+
+---
+
 ## 第0步：环境搭建
 
 ### 创建文件 `requirements.txt`
@@ -16,8 +42,9 @@ akshare>=1.12.0
 pandas>=2.0.0
 numpy>=1.24.0
 plotly>=5.15.0
-pandas-ta>=0.3.14b0
 ```
+
+**注意**：技术指标不使用 pandas-ta（PyPI 无 Python 3.11 可用版本），全部由 `core/indicators.py` 手写实现。
 
 安装命令：`pip install -r requirements.txt`
 
