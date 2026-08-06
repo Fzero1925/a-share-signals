@@ -1,0 +1,52 @@
+- generic [ref=f3e2]:
+  - generic [ref=f3e7]:
+    - button "keyboard_double_arrow_left" [ref=f3e321] [cursor=pointer]
+    - generic [ref=f3e11]:
+      - heading "A股模拟盘回测系统" [level=1] [ref=f3e15]
+      - generic [ref=f3e17]:
+        - paragraph [ref=f3e20]: 导航
+        - radiogroup "导航" [ref=f3e21] [cursor=pointer]:
+          - generic [ref=f3e22]:
+            - radio "📊 数据浏览"
+            - paragraph [ref=f3e27]: 📊 数据浏览
+          - generic [ref=f3e28]:
+            - radio "📈 策略回测" [checked] [active]
+            - paragraph [ref=f3e33]: 📈 策略回测
+          - generic [ref=f3e34]:
+            - radio "💰 模拟盘交易"
+            - paragraph [ref=f3e39]: 💰 模拟盘交易
+  - generic [ref=f3e3]:
+    - banner [ref=f3e42]:
+      - generic [ref=f3e45]:
+        - button "Deploy" [ref=f3e47] [cursor=pointer]
+        - button [ref=f3e51] [cursor=pointer]
+    - generic [ref=f3e55]:
+      - heading "📈 策略回测" [level=1] [ref=f3e332]
+      - generic [ref=f3e63]:
+        - generic [ref=f3e334]:
+          - paragraph [ref=f3e337]: 选择策略
+          - generic [ref=f3e339]:
+            - generic [ref=f3e340]:
+              - generic [ref=f3e341]: 趋势跟踪
+              - combobox "Selected 趋势跟踪. 选择策略" [ref=f3e343]
+            - img "open" [ref=f3e345] [cursor=pointer]
+        - generic [ref=f3e348]:
+          - paragraph [ref=f3e351]: 股票代码
+          - textbox "股票代码" [ref=f3e354]:
+            - /placeholder: ""
+            - text: "000001"
+        - generic [ref=f3e356]:
+          - paragraph [ref=f3e359]: 开始日期
+          - textbox "开始日期" [ref=f3e362]:
+            - /placeholder: ""
+            - text: "20210101"
+        - generic [ref=f3e364]:
+          - paragraph [ref=f3e367]: 结束日期
+          - textbox "结束日期" [ref=f3e370]:
+            - /placeholder: ""
+            - text: "20251231"
+      - group [ref=f3e373]:
+        - generic "keyboard_arrow_right ⚙️ 策略参数" [ref=f3e374] [cursor=pointer]:
+          - generic [ref=f3e375]:
+            - generic [ref=f3e376]: keyboard_arrow_right
+            - paragraph [ref=f3e379]: ⚙️ 策略参数

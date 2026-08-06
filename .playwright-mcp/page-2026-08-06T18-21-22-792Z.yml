@@ -1,0 +1,130 @@
+- generic [ref=f3e2]:
+  - generic [ref=f3e11]:
+    - heading "A股模拟盘回测系统" [level=1] [ref=f3e15]
+    - generic [ref=f3e17]:
+      - paragraph [ref=f3e20]: 导航
+      - radiogroup "导航" [ref=f3e21] [cursor=pointer]:
+        - generic [ref=f3e22]:
+          - radio "📊 数据浏览" [checked]
+          - paragraph [ref=f3e27]: 📊 数据浏览
+        - generic [ref=f3e28]:
+          - radio "📈 策略回测"
+          - paragraph [ref=f3e33]: 📈 策略回测
+        - generic [ref=f3e34]:
+          - radio "💰 模拟盘交易"
+          - paragraph [ref=f3e39]: 💰 模拟盘交易
+  - generic [ref=f3e3]:
+    - banner [ref=f3e42]:
+      - generic [ref=f3e45]:
+        - button "Deploy" [ref=f3e47] [cursor=pointer]
+        - button [ref=f3e51] [cursor=pointer]
+    - generic [ref=f3e55]:
+      - heading "📊 数据浏览" [level=1] [ref=f3e60]
+      - generic [ref=f3e63]:
+        - generic [ref=f3e67]:
+          - paragraph [ref=f3e70]: 股票代码
+          - textbox "股票代码" [ref=f3e73]:
+            - /placeholder: 如 600519 或 000001
+            - text: "600519"
+        - generic [ref=f3e77]:
+          - paragraph [ref=f3e80]: 开始日期
+          - textbox "开始日期" [ref=f3e83]:
+            - /placeholder: YYYYMMDD
+            - text: "20230101"
+        - generic [ref=f3e87]:
+          - paragraph [ref=f3e90]: 结束日期
+          - textbox "结束日期" [ref=f3e93]:
+            - /placeholder: YYYYMMDD
+            - text: "20251231"
+        - button [active] [ref=f3e98] [cursor=pointer]:
+          - paragraph [ref=f3e100]: 获取数据
+      - heading "技术指标叠加" [level=3] [ref=f3e113]
+      - generic [ref=f3e116]:
+        - generic [ref=f3e121] [cursor=pointer]:
+          - checkbox "均线 MA5/10/20" [checked]
+          - paragraph [ref=f3e126]: 均线 MA5/10/20
+        - generic [ref=f3e131] [cursor=pointer]:
+          - checkbox "EMA5/20"
+          - paragraph [ref=f3e136]: EMA5/20
+        - generic [ref=f3e141] [cursor=pointer]:
+          - checkbox "布林带 BOLL"
+          - paragraph [ref=f3e146]: 布林带 BOLL
+      - generic [ref=f3e152]:
+        - img:
+          - generic:
+            - generic:
+              - generic:
+                - generic: "1200"
+                - generic: "1300"
+                - generic: "1400"
+                - generic: "1500"
+                - generic: "1600"
+                - generic: "1700"
+                - generic: "1800"
+            - generic:
+              - generic:
+                - generic: Jul 2024
+                - generic: Jan 2025
+                - generic: Jul 2025
+              - generic:
+                - generic: "0"
+                - generic: 50k
+                - generic: 100k
+                - generic: 150k
+                - generic: 200k
+        - img:
+          - generic:
+            - generic [ref=f3e181]:
+              - generic [ref=f3e182]:
+                - generic [ref=f3e183]: K线
+                - generic [ref=f3e189] [cursor=pointer]
+              - generic [ref=f3e190]:
+                - generic [ref=f3e191]: MA5
+                - generic [ref=f3e192] [cursor=pointer]
+              - generic [ref=f3e193]:
+                - generic [ref=f3e194]: MA10
+                - generic [ref=f3e195] [cursor=pointer]
+              - generic [ref=f3e196]:
+                - generic [ref=f3e197]: MA20
+                - generic [ref=f3e198] [cursor=pointer]
+              - generic [ref=f3e199]:
+                - generic [ref=f3e200]: 成交量
+                - generic [ref=f3e205] [cursor=pointer]
+            - generic: 价格
+            - generic: 成交量
+        - toolbar [ref=f3e206]:
+          - button "Download plot as a PNG" [ref=f3e208] [cursor=pointer]
+          - generic [ref=f3e211]:
+            - button "Zoom" [ref=f3e212] [cursor=pointer]
+            - button "Pan" [ref=f3e215] [cursor=pointer]
+          - generic [ref=f3e218]:
+            - button "Zoom in" [ref=f3e219] [cursor=pointer]
+            - button "Zoom out" [ref=f3e222] [cursor=pointer]
+            - button "Autoscale" [ref=f3e225] [cursor=pointer]
+            - button "Reset axes" [ref=f3e228] [cursor=pointer]
+          - button "Fullscreen" [ref=f3e232] [cursor=pointer]
+      - heading "最新技术指标" [level=3] [ref=f3e239]
+      - generic [ref=f3e242]:
+        - generic [ref=f3e247]:
+          - paragraph [ref=f3e251]: 收盘价
+          - generic [ref=f3e252]: "1349.16"
+        - generic [ref=f3e258]:
+          - paragraph [ref=f3e262]: RSI(14)
+          - generic [ref=f3e263]: "35.4"
+        - generic [ref=f3e269]:
+          - paragraph [ref=f3e273]: ADX(14)
+          - generic [ref=f3e274]: "11.0"
+        - generic [ref=f3e280]:
+          - paragraph [ref=f3e284]: MACD DIF
+          - generic [ref=f3e285]: "-5.731"
+        - generic [ref=f3e291]:
+          - paragraph [ref=f3e295]: MACD DEA
+          - generic [ref=f3e296]: "-4.744"
+        - generic [ref=f3e302]:
+          - paragraph [ref=f3e306]: ATR(14)
+          - generic [ref=f3e307]: "14.89"
+      - group [ref=f3e311]:
+        - generic "keyboard_arrow_right 查看原始数据" [ref=f3e312] [cursor=pointer]:
+          - generic [ref=f3e313]:
+            - generic [ref=f3e314]: keyboard_arrow_right
+            - paragraph [ref=f3e317]: 查看原始数据

@@ -16,6 +16,28 @@ class DataFetchError(Exception):
 
 class DataManager:
     _TENCENT_KLINE_URL = "https://web.ifzq.gtimg.cn/appstock/app/fqkline/get"
+    _FALLBACK_NAMES = {
+        "600519": "贵州茅台",
+        "000001": "平安银行",
+        "300750": "宁德时代",
+        "601318": "中国平安",
+        "600036": "招商银行",
+        "600030": "中信证券",
+        "000858": "五粮液",
+        "601899": "紫金矿业",
+        "600900": "长江电力",
+        "601398": "工商银行",
+        "601288": "农业银行",
+        "600276": "恒瑞医药",
+        "002594": "比亚迪",
+        "601012": "隆基绿能",
+        "002415": "海康威视",
+        "000333": "美的集团",
+        "600887": "伊利股份",
+        "603288": "海天味业",
+        "300059": "东方财富",
+        "601888": "中国中免",
+    }
 
     def __init__(self, cache_dir: str = CACHE_DIR):
         self.cache_dir = cache_dir
@@ -103,34 +125,45 @@ class DataManager:
         market = "sh" if code.startswith("6") else "sz"
         symbol = f"{market}{code}"
         params = {"param": f"{symbol},day,{self._fmt(start_date)},{self._fmt(end_date)},640,qfq"}
-        r = requests.get(self._TENCENT_KLINE_URL, params=params, timeout=15)
-        r.raise_for_status()
-        data = r.json()
-        stock = data.get("data", {}).get(symbol, {})
-        klines = stock.get("qfqday") or stock.get("day") or []
-        if not klines:
-            return pd.DataFrame(columns=["date", "open", "high", "low", "close", "volume", "amount"])
-        rows = []
-        for k in klines:
-            amount = 0.0
-            if len(k) > 6 and isinstance(k[6], (int, float, str)):
-                try:
-                    amount = float(k[6])
-                except (TypeError, ValueError):
+        last_error = None
+        for attempt in range(3):
+            try:
+                r = requests.get(
+                    self._TENCENT_KLINE_URL,
+                    params=params,
+                    timeout=15,
+                    headers={"User-Agent": "Mozilla/5.0", "Referer": "https://gu.qq.com/"},
+                )
+                r.raise_for_status()
+                data = r.json()
+                stock = data.get("data", {}).get(symbol, {})
+                klines = stock.get("qfqday") or stock.get("day") or []
+                if not klines:
+                    return pd.DataFrame(columns=["date", "open", "high", "low", "close", "volume", "amount"])
+                rows = []
+                for k in klines:
                     amount = 0.0
-            rows.append(
-                {
-                    "date": pd.to_datetime(k[0]),
-                    "open": float(k[1]),
-                    "high": float(k[3]),
-                    "low": float(k[4]),
-                    "close": float(k[2]),
-                    "volume": float(k[5]),
-                    "amount": amount,
-                }
-            )
-        df = pd.DataFrame(rows)
-        return df.sort_values("date").reset_index(drop=True)
+                    if len(k) > 6 and isinstance(k[6], (int, float, str)):
+                        try:
+                            amount = float(k[6])
+                        except (TypeError, ValueError):
+                            amount = 0.0
+                    rows.append(
+                        {
+                            "date": pd.to_datetime(k[0]),
+                            "open": float(k[1]),
+                            "high": float(k[3]),
+                            "low": float(k[4]),
+                            "close": float(k[2]),
+                            "volume": float(k[5]),
+                            "amount": amount,
+                        }
+                    )
+                df = pd.DataFrame(rows)
+                return df.sort_values("date").reset_index(drop=True)
+            except Exception as e:
+                last_error = e
+        raise DataFetchError(f"腾讯K线获取失败: {last_error}")
 
     @staticmethod
     def _fmt(date_str: str) -> str:
@@ -180,64 +213,95 @@ class DataManager:
                 df = pd.read_csv(self.stock_list_path, dtype={"code": str})
                 df["code"] = df["code"].str.zfill(6)
                 return df
-        raw = ak.stock_zh_a_spot_em()
-        if raw is None or raw.empty:
-            if os.path.exists(self.stock_list_path):
-                return pd.read_csv(self.stock_list_path, dtype={"code": str})
-            raise DataFetchError("股票列表获取失败")
-        df = raw.rename(
-            columns={
-                "代码": "code",
-                "名称": "name",
-                "最新价": "price",
-                "涨跌幅": "pct_change",
-                "成交量": "volume",
-                "成交额": "amount",
-                "市盈率-动态": "pe",
-            }
-        )
-        keep = ["code", "name", "price", "pct_change", "volume", "amount", "pe"]
-        df = df[[c for c in keep if c in df.columns]]
-        df["code"] = df["code"].astype(str).str.zfill(6)
-        df.to_csv(self.stock_list_path, index=False, encoding="utf-8")
-        return df
+        try:
+            raw = ak.stock_zh_a_spot_em()
+            if raw is not None and not raw.empty:
+                df = raw.rename(
+                    columns={
+                        "代码": "code",
+                        "名称": "name",
+                        "最新价": "price",
+                        "涨跌幅": "pct_change",
+                        "成交量": "volume",
+                        "成交额": "amount",
+                        "市盈率-动态": "pe",
+                    }
+                )
+                keep = ["code", "name", "price", "pct_change", "volume", "amount", "pe"]
+                df = df[[c for c in keep if c in df.columns]]
+                df["code"] = df["code"].astype(str).str.zfill(6)
+                df.to_csv(self.stock_list_path, index=False, encoding="utf-8")
+                return df
+        except Exception:
+            pass
+        if os.path.exists(self.stock_list_path):
+            return pd.read_csv(self.stock_list_path, dtype={"code": str})
+        return pd.DataFrame(columns=["code", "name"])
+
+    def get_stock_name(self, stock_code: str) -> str:
+        code = self.standardize_code(stock_code)
+        df = self.get_stock_list()
+        if df is not None and not df.empty:
+            match = df[df["code"] == code]
+            if not match.empty:
+                return str(match.iloc[0]["name"])
+        return self._FALLBACK_NAMES.get(code, code)
 
     def get_realtime_price(self, stock_code: str) -> dict:
         code = self.standardize_code(stock_code)
+        market = "sh" if code.startswith("6") else "sz"
+        symbol = f"{market}{code}"
         try:
-            raw = ak.stock_bid_ask_em(symbol=code)
-            price = float(raw.loc[raw["item"] == "最新", "value"].iloc[0])
-            return {"code": code, "price": price}
+            r = requests.get(
+                f"https://qt.gtimg.cn/q={symbol}",
+                timeout=10,
+                headers={"Referer": "https://gu.qq.com/"},
+            )
+            r.raise_for_status()
+            text = r.text
+            quote = text.split('"')[1] if '"' in text else ""
+            fields = quote.split("~")
+            if len(fields) > 3:
+                return {"code": code, "price": float(fields[3])}
+            raise DataFetchError(f"股票代码 {code} 实时行情解析失败")
+        except DataFetchError:
+            raise
         except Exception:
             raise DataFetchError(f"股票代码 {code} 实时行情获取失败")
 
     def get_index_daily(self, symbol: str, start_date: str = "20240101") -> pd.DataFrame:
-        try:
-            params = {"param": f"{symbol},day,{self._fmt(start_date)},{datetime.now().strftime('%Y-%m-%d')},640,"}
-            r = requests.get(self._TENCENT_KLINE_URL, params=params, timeout=15)
-            r.raise_for_status()
-            data = r.json()
-            klines = data.get("data", {}).get(symbol, {}).get("day") or []
-            if not klines:
-                raise DataFetchError(f"指数 {symbol} 数据获取失败")
-            rows = []
-            for k in klines:
-                rows.append(
-                    {
-                        "date": pd.to_datetime(k[0]),
-                        "open": float(k[1]),
-                        "high": float(k[3]),
-                        "low": float(k[4]),
-                        "close": float(k[2]),
-                        "volume": float(k[5]),
-                    }
+        params = {"param": f"{symbol},day,{self._fmt(start_date)},{datetime.now().strftime('%Y-%m-%d')},640,"}
+        last_error = None
+        for attempt in range(3):
+            try:
+                r = requests.get(
+                    self._TENCENT_KLINE_URL,
+                    params=params,
+                    timeout=15,
+                    headers={"User-Agent": "Mozilla/5.0", "Referer": "https://gu.qq.com/"},
                 )
-            df = pd.DataFrame(rows)
-            return df.sort_values("date").reset_index(drop=True)
-        except DataFetchError:
-            raise
-        except Exception as e:
-            raise DataFetchError(f"指数 {symbol} 数据获取失败: {e}")
+                r.raise_for_status()
+                data = r.json()
+                klines = data.get("data", {}).get(symbol, {}).get("day") or []
+                if not klines:
+                    raise DataFetchError(f"指数 {symbol} 数据获取失败")
+                rows = []
+                for k in klines:
+                    rows.append(
+                        {
+                            "date": pd.to_datetime(k[0]),
+                            "open": float(k[1]),
+                            "high": float(k[3]),
+                            "low": float(k[4]),
+                            "close": float(k[2]),
+                            "volume": float(k[5]),
+                        }
+                    )
+                df = pd.DataFrame(rows)
+                return df.sort_values("date").reset_index(drop=True)
+            except Exception as e:
+                last_error = e
+        raise DataFetchError(f"指数 {symbol} 数据获取失败: {last_error}")
 
     def clear_cache(self, stock_code: Optional[str] = None) -> None:
         if stock_code is None:
