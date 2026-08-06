@@ -12,3 +12,6 @@ data/portfolio/
 # CIç”Ÿæˆç‰©ï¼ˆç”±Actionsè‡ªåŠ¨æäº¤ï¼‰
 signals/*.json
 public/
+
+# Playwright²âÊÔ²úÎï
+.playwright-mcp/
