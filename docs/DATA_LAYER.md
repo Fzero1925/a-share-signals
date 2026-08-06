@@ -1,18 +1,25 @@
 # 数据层规范
 
-## 1. 数据源：AKShare
+## 1. 数据源：AKShare + 腾讯接口
 
 AKShare 是一个免费开源的Python金融数据接口库。
 - 文档：https://akshare.akfamily.xyz
 - 安装：`pip install akshare`
 - 无需API Key，直接调用
 
+**注意（实测发现）**：东方财富接口 `push2his.eastmoney.com` 在某些网络环境（TLS指纹风控）下不稳定，`stock_zh_a_hist` 会间歇性连接失败。因此采用**腾讯接口作为主数据源**，东财作为备用：
+
+| 优先级 | 接口 | 说明 |
+|--------|------|------|
+| 主 | `web.ifzq.gtimg.cn/appstock/app/fqkline/get` | 腾讯历史K线，稳定，返回前复权数据 |
+| 备 | `ak.stock_zh_a_hist` | 东财历史K线，网络不稳定时自动回退 |
+
 ### 1.1 日线数据获取
 
 ```python
 import akshare as ak
 
-# 获取A股日线数据
+# 备用：获取A股日线数据（东财）
 df = ak.stock_zh_a_hist(
     symbol="000001",       # 股票代码（不带后缀）
     period="daily",        # 日线
@@ -20,6 +27,10 @@ df = ak.stock_zh_a_hist(
     end_date="20241231",   # 结束日期 YYYYMMDD
     adjust="qfq"           # 前复权
 )
+
+# 主：腾讯K线（由 DataManager 内部调用，无需直接使用）
+# GET https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000001,day,2024-01-01,2024-01-31,640,qfq
+# 返回格式: data.{symbol}.qfqday = [[date, open, close, high, low, volume, amount], ...]
 ```
 
 ### 1.2 AKShare返回的DataFrame列映射

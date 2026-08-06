@@ -1,0 +1,60 @@
+name: A-share Intraday Signals
+
+on:
+  schedule:
+    - cron: '0,10,20,30 1 * * 1-5'
+    - cron: '0,30 2,3 * * 1-5'
+    - cron: '0,30 5,6 * * 1-5'
+    - cron: '50 6 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: a-share-intraday
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  signals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run strategy signals
+        run: python ci/run_signals.py
+
+      - name: Generate HTML report
+        run: python ci/generate_report.py
+
+      - name: Commit signals
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add signals/
+          git diff --cached --quiet || git commit -m "Intraday signals $(date +%Y-%m-%d_%H-%M)"
+          git push origin main
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
