@@ -1,16 +1,18 @@
+import json
 import os
 
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from config.settings import PORTFOLIO_DIR
+from config.settings import PORTFOLIO_DIR, SIGNALS_DIR
 from core.data_manager import DataFetchError, DataManager
 from core.indicators import add_all_indicators
 from core.portfolio import PortfolioManager
 from core.strategy_engine import STRATEGY_REGISTRY, get_strategy
 
 ACCOUNT_FILE = os.path.join(PORTFOLIO_DIR, "paper_account.json")
+PORTFOLIO_JSON = os.path.join(SIGNALS_DIR, "portfolio.json")
 
 
 @st.cache_data(ttl=1800, show_spinner=False)
@@ -70,9 +72,82 @@ def generate_daily_signals(strategy_name: str, params: dict, codes: list[str]) -
     return signals
 
 
-def show():
-    st.title("💰 模拟盘交易")
+def show_portfolio_mode():
+    st.subheader("🤖 组合自动模拟盘（每日动量选股）")
+    if not os.path.exists(PORTFOLIO_JSON):
+        st.info("尚未生成组合报告。本地请先运行 `python ci/run_portfolio.py`，或等待 CI 每日 15:30 自动调仓。")
+        return
 
+    with open(PORTFOLIO_JSON, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    perf = data.get("performance", {})
+    c1, c2, c3, c4, c5, c6 = st.columns(6)
+    c1.metric("总资产", f"{perf.get('total_equity', 0):,.2f}")
+    c2.metric("总收益率", f"{perf.get('total_return', 0):+.2%}")
+    c3.metric("现金", f"{perf.get('cash', 0):,.2f}")
+    c4.metric("持仓数", f"{perf.get('positions', 0)}")
+    c5.metric("已平仓", f"{perf.get('total_trades', 0)}")
+    c6.metric("池规模", f"{data.get('pool_size', 0)}")
+
+    st.caption(f"报告时间: {data.get('generated_at', '')} | 策略: {data.get('strategy', '')}")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.markdown("**今日选股 (Top N)**")
+        selected = data.get("selected", [])
+        if selected:
+            st.dataframe(
+                pd.DataFrame(selected)[["name", "code", "close", "target_amount"]],
+                use_container_width=True,
+            )
+        else:
+            st.info("今日无选股")
+    with col2:
+        st.markdown("**当前持仓**")
+        positions = data.get("positions", [])
+        if positions:
+            rows = []
+            for p in positions:
+                price = p.get("current_price", p.get("entry_price", 0))
+                entry = p.get("entry_price", 0)
+                pnl = (price - entry) * p.get("shares", 0)
+                rows.append(
+                    {
+                        "名称": p.get("name", p.get("code")),
+                        "代码": p.get("code"),
+                        "股数": p.get("shares"),
+                        "成本": round(entry, 2),
+                        "现价": round(price, 2),
+                        "盈亏": round(pnl, 2),
+                        "买入日": p.get("entry_date"),
+                    }
+                )
+            st.dataframe(pd.DataFrame(rows), use_container_width=True)
+        else:
+            st.info("当前空仓")
+
+    st.markdown("**调仓报告**")
+    report = data.get("rebalance", {})
+    st.write(
+        f"卖出 {len(report.get('sold', []))} 笔，买入 {len(report.get('bought', []))} 笔，"
+        f"受阻 {len(report.get('blocked', []))} 笔"
+    )
+    if report.get("blocked"):
+        st.warning("受阻明细: " + "; ".join(f"{b.get('code')}:{b.get('reason')}" for b in report["blocked"]))
+
+    eq = data.get("equity_history", [])
+    if eq:
+        st.markdown("**资金曲线**")
+        eq_df = pd.DataFrame(eq)
+        fig = go.Figure(
+            go.Scatter(x=eq_df["date"], y=eq_df["equity"], mode="lines+markers", name="账户净值", line=dict(color="blue"))
+        )
+        fig.update_layout(height=350, margin=dict(l=10, r=10, t=30, b=10))
+        st.plotly_chart(fig, use_container_width=True)
+
+
+def show_manual_mode():
     pm = PortfolioManager()
     if os.path.exists(ACCOUNT_FILE):
         pm.load_state(ACCOUNT_FILE)
@@ -230,7 +305,23 @@ def show():
     st.subheader("📋 交易历史")
     if history:
         hist_df = pd.DataFrame(history)
+        if "pnl" not in hist_df.columns:
+            hist_df["pnl"] = 0.0
         hist_df["pnl"] = hist_df["pnl"].fillna(0)
         st.dataframe(hist_df, use_container_width=True)
     else:
         st.info("暂无交易记录")
+
+
+def show():
+    st.title("💰 模拟盘交易")
+
+    mode = st.radio(
+        "模式",
+        ["🤖 组合自动模拟盘", "📋 手动交易"],
+        horizontal=True,
+    )
+    if mode == "🤖 组合自动模拟盘":
+        show_portfolio_mode()
+    else:
+        show_manual_mode()
