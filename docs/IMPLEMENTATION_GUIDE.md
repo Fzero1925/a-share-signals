@@ -26,9 +26,15 @@
 - `core/strategy_base.py`：同时定义 `BaseStrategy`（单股）和 `MultiStockStrategy`（多股）两个基类
 - CI 脚本实测通过：`python ci/run_signals.py` 生成 `signals/latest.json`，`python ci/generate_report.py` 生成 `public/index.html`
 
-### 待验证事项
-- [ ] GitHub Actions 定时任务首次运行（已触发 workflow_dispatch，排队中）
-- [ ] GitHub Pages 首次部署（Settings → Pages → Source: GitHub Actions）
+### 待验证事项（2026-08-07 已全部验证通过 ✅）
+- [x] GitHub Actions 定时任务首次运行（手动触发成功，46秒完成，含信号生成+Pages部署）
+- [x] GitHub Pages 首次部署（`https://fzero1925.github.io/a-share-signals/` 已上线，信号页正常渲染）
+- [x] signals/ 与 public/ 由 CI 自动提交回仓库
+
+**CI 排障记录（重要，供后续参考）**：
+1. **runner 高峰排队**：BJT 凌晨（=美东下午）免费 runner 排队超15分钟报 "job was not acquired"——非代码问题，错峰触发即可
+2. **git add 被忽略**：`.gitignore` 忽略了 `public/` 和 `signals/`，CI 的 `git add` 报 "paths are ignored" 退出码1——已改用 `git add -f`
+3. **Pages 未启用**：`configure-pages` 报 "Not Found"——需先在仓库 Settings→Pages 或 API 设置 Source 为 GitHub Actions
 
 ---
 
