@@ -35,6 +35,9 @@ jobs:
       - name: Run daily signals
         run: python ci/run_signals.py
 
+      - name: Run portfolio rebalance
+        run: python ci/run_portfolio.py
+
       - name: Generate HTML report
         run: python ci/generate_report.py
 

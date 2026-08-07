@@ -17,7 +17,7 @@ ACTION_STYLE = {
 ACTION_LABEL = {"BUY": "买入", "SELL": "卖出", "HOLD": "观望"}
 
 
-def build_html(data: dict, page_title: str = None) -> str:
+def build_html(data: dict, page_title: str = None, extra_html: str = "") -> str:
     date = data.get("date", datetime.now().strftime("%Y-%m-%d"))
     generated = data.get("generated_at", "")
     title = page_title or f"A股信号 {date}"
@@ -118,12 +118,104 @@ td {{ padding:10px 20px; border-top:1px solid #f0f0f0; }}
 <h1>📈 A股策略信号 {html.escape(date)}</h1>
 <div class="sub">生成时间: {html.escape(generated)}</div>
 <div class="indexes">{summary_html}</div>
+{extra_html}
 {failures_html}
 {cards}
 <div class="sub" style="margin-top:24px;text-align:center">数据来源: 腾讯行情 | 仅供学习研究，不构成投资建议</div>
 </div>
 </body>
 </html>"""
+
+
+def build_portfolio_html(portfolio_path: str) -> str:
+    if not os.path.exists(portfolio_path):
+        return ""
+    with open(portfolio_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    perf = data.get("performance", {})
+    total_return = perf.get("total_return", 0)
+    color = "red" if total_return >= 0 else "green"
+
+    stats = f"""
+    <div class="indexes">
+      <div class="index"><span class="idx-label">总资产</span><span class="idx-value">{perf.get('total_equity', 0):,.0f}</span></div>
+      <div class="index"><span class="idx-label">总收益率</span><span class="idx-value" style="color:{color}">{total_return:+.2%}</span></div>
+      <div class="index"><span class="idx-label">现金</span><span class="idx-value">{perf.get('cash', 0):,.0f}</span></div>
+      <div class="index"><span class="idx-label">持仓数</span><span class="idx-value">{perf.get('positions', 0)}</span></div>
+      <div class="index"><span class="idx-label">已平仓</span><span class="idx-value">{perf.get('total_trades', 0)}</span></div>
+    </div>
+    """
+
+    positions_html = ""
+    for pos in data.get("positions", []):
+        code = html.escape(str(pos.get("code", "")))
+        name = html.escape(str(pos.get("name", code)))
+        price = pos.get("current_price", pos.get("entry_price", 0))
+        entry = pos.get("entry_price", 0)
+        pnl = (price - entry) * pos.get("shares", 0)
+        pnl_color = "red" if pnl >= 0 else "green"
+        positions_html += (
+            f'<tr><td>{name}</td><td>{code}</td><td>{pos.get("shares", 0)}</td>'
+            f'<td>{entry:.2f}</td><td>{price:.2f}</td>'
+            f'<td style="color:{pnl_color}">{pnl:+.2f}</td>'
+            f'<td>{html.escape(str(pos.get("entry_date", "")))}</td></tr>'
+        )
+    if not positions_html:
+        positions_html = '<tr><td colspan="7" class="empty">当前空仓</td></tr>'
+
+    selected_html = ""
+    for sel in data.get("selected", []):
+        selected_html += (
+            f'<tr><td>{html.escape(str(sel.get("name", sel.get("code", ""))))}</td>'
+            f'<td>{html.escape(str(sel.get("code", "")))}</td>'
+            f'<td>{sel.get("close", 0):.2f}</td><td>{sel.get("target_amount", 0):,.0f}</td></tr>'
+        )
+    if not selected_html:
+        selected_html = '<tr><td colspan="4" class="empty">今日无选股</td></tr>'
+
+    report = data.get("rebalance", {})
+    blocked_html = ""
+    for b in report.get("blocked", []):
+        blocked_html += f'<li>{html.escape(str(b.get("code", "")))}: {html.escape(str(b.get("reason", "")))}</li>'
+
+    equity_html = ""
+    eq = data.get("equity_history", [])
+    if eq:
+        points = ",".join(
+            f'{{"d":"{html.escape(str(e.get("date", "")))}","v":{e.get("equity", 0)}}}' for e in eq[-60:]
+        )
+        equity_html = (
+            f'<canvas id="eqChart" height="80"></canvas>'
+            f'<script>const eq=JSON.parse(\'[{points}]\');'
+            f'const cv=document.getElementById("eqChart").getContext("2d");'
+            f'cv.fillStyle="#fafafa";cv.fillRect(0,0,cv.canvas.width,cv.canvas.height);'
+            f'const mn=Math.min(...eq.map(p=>p.v)),mx=Math.max(...eq.map(p=>p.v));'
+            f'const w=cv.canvas.width,h=cv.canvas.height;'
+            f'cv.strokeStyle="#2196f3";cv.lineWidth=2;cv.beginPath();'
+            f'eq.forEach((p,i)=>{{const x=i/(eq.length-1||1)*w,y=h-10-((p.v-mn)/((mx-mn)||1))*(h-30);'
+            f'i?cv.lineTo(x,y):cv.moveTo(x,y);}});cv.stroke();</script>'
+        )
+
+    return f"""
+    <div class="card">
+      <div class="card-header"><span class="stock-name">💼 模拟盘组合账户</span>
+      <span class="stock-code">{html.escape(data.get('strategy', ''))}</span></div>
+      <div style="padding:16px 20px;">
+      {stats}
+      {equity_html}
+      <h3 style="font-size:15px;margin:12px 0 6px;">今日选股 (Top {len(data.get('selected', []))})</h3>
+      <table><thead><tr><th>名称</th><th>代码</th><th>收盘</th><th>目标金额</th></tr></thead>
+      <tbody>{selected_html}</tbody></table>
+      <h3 style="font-size:15px;margin:12px 0 6px;">当前持仓</h3>
+      <table><thead><tr><th>名称</th><th>代码</th><th>股数</th><th>成本</th><th>现价</th><th>盈亏</th><th>买入日</th></tr></thead>
+      <tbody>{positions_html}</tbody></table>
+      <h3 style="font-size:15px;margin:12px 0 6px;">调仓报告</h3>
+      <p style="font-size:13px;color:#666;">卖出 {len(report.get('sold', []))} 笔，买入 {len(report.get('bought', []))} 笔，受阻 {len(report.get('blocked', []))} 笔</p>
+      {f'<ul style="font-size:13px;color:#c62828;">{blocked_html}</ul>' if blocked_html else ''}
+      </div>
+    </div>
+    """
 
 
 def build_history_list(history_dir: str) -> str:
@@ -153,14 +245,16 @@ def main() -> int:
 
     date = data.get("date", datetime.now().strftime("%Y-%m-%d"))
 
-    index_html = build_html(data)
+    portfolio_html = build_portfolio_html(os.path.join(SIGNALS_DIR, "portfolio.json"))
+
+    index_html = build_html(data, extra_html=portfolio_html)
     index_html = index_html.replace("</body>", build_history_list(os.path.join(PUBLIC_DIR, "history")) + "</body>")
     with open(os.path.join(PUBLIC_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(index_html)
 
     history_path = os.path.join(PUBLIC_DIR, "history", f"{date.replace('-', '')}.html")
     with open(history_path, "w", encoding="utf-8") as f:
-        f.write(build_html(data))
+        f.write(build_html(data, extra_html=portfolio_html))
 
     print(f"报告已生成: {os.path.join(PUBLIC_DIR, 'index.html')}")
     return 0

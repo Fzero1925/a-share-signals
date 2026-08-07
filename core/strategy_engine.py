@@ -1,6 +1,7 @@
 from typing import Type
 
 from core.strategy_base import BaseStrategy
+from strategies.daily_momentum import DailyMomentumStrategy
 from strategies.mean_revert import MeanRevertStrategy
 from strategies.momentum import MomentumStrategy
 from strategies.multi_factor import MultiFactorStrategy
@@ -11,6 +12,7 @@ STRATEGY_REGISTRY: dict[str, Type[BaseStrategy]] = {
     "均值回归": MeanRevertStrategy,
     "动量突破": MomentumStrategy,
     "多因子轮动": MultiFactorStrategy,
+    "每日动量选股": DailyMomentumStrategy,
 }
 
 
