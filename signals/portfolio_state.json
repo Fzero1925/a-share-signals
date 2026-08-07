@@ -1,0 +1,103 @@
+{
+  "initial_capital": 100000.0,
+  "cash": 9272.62124,
+  "created_at": "2026-08-08 00:31:10",
+  "updated_at": "2026-08-08 00:31:10",
+  "positions": {
+    "300209": {
+      "shares": 500,
+      "entry_price": 37.19,
+      "entry_date": "2026-08-07",
+      "reason": "调仓买入",
+      "name": "行云科技"
+    },
+    "603039": {
+      "shares": 400,
+      "entry_price": 45.58,
+      "entry_date": "2026-08-07",
+      "reason": "调仓买入",
+      "name": "泛微网络"
+    },
+    "301171": {
+      "shares": 500,
+      "entry_price": 39.13,
+      "entry_date": "2026-08-07",
+      "reason": "调仓买入",
+      "name": "易点天下"
+    },
+    "300083": {
+      "shares": 1300,
+      "entry_price": 14.48,
+      "entry_date": "2026-08-07",
+      "reason": "调仓买入",
+      "name": "创世纪"
+    },
+    "603259": {
+      "shares": 100,
+      "entry_price": 154.82,
+      "entry_date": "2026-08-07",
+      "reason": "调仓买入",
+      "name": "药明康德"
+    }
+  },
+  "trade_history": [
+    {
+      "date": "2026-08-07",
+      "code": "300209",
+      "name": "行云科技",
+      "action": "BUY",
+      "price": 37.19,
+      "shares": 500,
+      "cost": 5.95,
+      "reason": "调仓买入"
+    },
+    {
+      "date": "2026-08-07",
+      "code": "603039",
+      "name": "泛微网络",
+      "action": "BUY",
+      "price": 45.58,
+      "shares": 400,
+      "cost": 5.83,
+      "reason": "调仓买入"
+    },
+    {
+      "date": "2026-08-07",
+      "code": "301171",
+      "name": "易点天下",
+      "action": "BUY",
+      "price": 39.13,
+      "shares": 500,
+      "cost": 6.26,
+      "reason": "调仓买入"
+    },
+    {
+      "date": "2026-08-07",
+      "code": "300083",
+      "name": "创世纪",
+      "action": "BUY",
+      "price": 14.48,
+      "shares": 1300,
+      "cost": 6.02,
+      "reason": "调仓买入"
+    },
+    {
+      "date": "2026-08-07",
+      "code": "603259",
+      "name": "药明康德",
+      "action": "BUY",
+      "price": 154.82,
+      "shares": 100,
+      "cost": 5.31,
+      "reason": "调仓买入"
+    }
+  ],
+  "equity_history": [
+    {
+      "date": "2026-08-07",
+      "equity": 99970.62,
+      "cash": 9272.62,
+      "positions": 5
+    }
+  ]
+}
