@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add signals/ public/
+          git add -f signals/ public/
           git diff --cached --quiet || git commit -m "Daily report $(date +%Y-%m-%d)"
           git push origin main
 
