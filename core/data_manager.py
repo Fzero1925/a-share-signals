@@ -124,46 +124,77 @@ class DataManager:
     def _fetch_tencent(self, code: str, start_date: str, end_date: str) -> pd.DataFrame:
         market = "sh" if code.startswith("6") else "sz"
         symbol = f"{market}{code}"
-        params = {"param": f"{symbol},day,{self._fmt(start_date)},{self._fmt(end_date)},640,qfq"}
+        all_rows = []
         last_error = None
-        for attempt in range(3):
-            try:
-                r = requests.get(
-                    self._TENCENT_KLINE_URL,
-                    params=params,
-                    timeout=15,
-                    headers={"User-Agent": "Mozilla/5.0", "Referer": "https://gu.qq.com/"},
-                )
-                r.raise_for_status()
-                data = r.json()
-                stock = data.get("data", {}).get(symbol, {})
-                klines = stock.get("qfqday") or stock.get("day") or []
-                if not klines:
-                    return pd.DataFrame(columns=["date", "open", "high", "low", "close", "volume", "amount"])
-                rows = []
-                for k in klines:
-                    amount = 0.0
-                    if len(k) > 6 and isinstance(k[6], (int, float, str)):
-                        try:
-                            amount = float(k[6])
-                        except (TypeError, ValueError):
-                            amount = 0.0
-                    rows.append(
-                        {
-                            "date": pd.to_datetime(k[0]),
-                            "open": float(k[1]),
-                            "high": float(k[3]),
-                            "low": float(k[4]),
-                            "close": float(k[2]),
-                            "volume": float(k[5]),
-                            "amount": amount,
-                        }
+        cursor = self._fmt(start_date)
+        max_loop = 8
+
+        for loop in range(max_loop):
+            params = {"param": f"{symbol},day,{cursor},{self._fmt(end_date)},800,qfq"}
+            got = False
+            for attempt in range(3):
+                try:
+                    r = requests.get(
+                        self._TENCENT_KLINE_URL,
+                        params=params,
+                        timeout=15,
+                        headers={"User-Agent": "Mozilla/5.0", "Referer": "https://gu.qq.com/"},
                     )
-                df = pd.DataFrame(rows)
-                return df.sort_values("date").reset_index(drop=True)
-            except Exception as e:
-                last_error = e
-        raise DataFetchError(f"腾讯K线获取失败: {last_error}")
+                    r.raise_for_status()
+                    data = r.json()
+                    stock = data.get("data", {}).get(symbol, {})
+                    klines = stock.get("qfqday") or stock.get("day") or []
+                    rows = []
+                    for k in klines:
+                        amount = 0.0
+                        if len(k) > 6 and isinstance(k[6], (int, float, str)):
+                            try:
+                                amount = float(k[6])
+                            except (TypeError, ValueError):
+                                amount = 0.0
+                        rows.append(
+                            {
+                                "date": pd.to_datetime(k[0]),
+                                "open": float(k[1]),
+                                "high": float(k[3]),
+                                "low": float(k[4]),
+                                "close": float(k[2]),
+                                "volume": float(k[5]),
+                                "amount": amount,
+                            }
+                        )
+                    if rows:
+                        all_rows.extend(rows)
+                        got = True
+                        earliest = rows[0]["date"]
+                        latest = rows[-1]["date"]
+                        if earliest <= pd.to_datetime(start_date) or len(rows) < 800:
+                            return self._finalize_tencent(all_rows)
+                        cursor = earliest.strftime("%Y-%m-%d")
+                        break
+                    else:
+                        if not all_rows:
+                            return pd.DataFrame(
+                                columns=["date", "open", "high", "low", "close", "volume", "amount"]
+                            )
+                        return self._finalize_tencent(all_rows)
+                except Exception as e:
+                    last_error = e
+                    if attempt == 2:
+                        break
+            if not got:
+                break
+
+        if not all_rows:
+            raise DataFetchError(f"腾讯K线获取失败: {last_error}")
+        return self._finalize_tencent(all_rows)
+
+    def _finalize_tencent(self, rows: list) -> pd.DataFrame:
+        df = pd.DataFrame(rows)
+        if df.empty:
+            return df
+        df = df.drop_duplicates(subset=["date"])
+        return df.sort_values("date").reset_index(drop=True)
 
     @staticmethod
     def _fmt(date_str: str) -> str:
