@@ -138,11 +138,35 @@ def show_portfolio_mode():
 
     eq = data.get("equity_history", [])
     if eq:
-        st.markdown("**资金曲线**")
+        st.markdown("**资金曲线（vs 沪深300）**")
         eq_df = pd.DataFrame(eq)
-        fig = go.Figure(
-            go.Scatter(x=eq_df["date"], y=eq_df["equity"], mode="lines+markers", name="账户净值", line=dict(color="blue"))
-        )
+        fig = go.Figure()
+
+        base = perf.get("total_equity", 0)
+        if base:
+            fig.add_trace(
+                go.Scatter(
+                    x=eq_df["date"], y=eq_df["equity"], mode="lines+markers",
+                    name="策略净值", line=dict(color="blue", width=2),
+                )
+            )
+
+        try:
+            dm = DataManager()
+            hs300 = dm.get_index_daily("sh000300", str(eq_df["date"].iloc[0].date()))
+            hs300 = hs300[hs300["date"] >= eq_df["date"].iloc[0]]
+            if not hs300.empty:
+                hs300 = hs300.copy()
+                hs300["norm"] = hs300["close"] / hs300["close"].iloc[0] * float(eq_df["equity"].iloc[0])
+                fig.add_trace(
+                    go.Scatter(
+                        x=hs300["date"], y=hs300["norm"], mode="lines",
+                        name="沪深300(归一化)", line=dict(color="gray", width=1, dash="dash"),
+                    )
+                )
+        except Exception:
+            pass
+
         fig.update_layout(height=350, margin=dict(l=10, r=10, t=30, b=10))
         st.plotly_chart(fig, use_container_width=True)
 

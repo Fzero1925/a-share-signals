@@ -21,8 +21,12 @@ def load_stock_list():
         return pd.DataFrame(columns=["code", "name"])
 
 
-def build_chart(df: pd.DataFrame, show_ma: bool, show_boll: bool, show_ema: bool) -> go.Figure:
-    fig = make_subplots(rows=2, cols=1, shared_xaxes=True, row_heights=[0.75, 0.25], vertical_spacing=0.03)
+def build_chart(df: pd.DataFrame, show_ma: bool, show_boll: bool, show_ema: bool, show_macd: bool, show_rsi: bool) -> go.Figure:
+    n_rows = 2 + int(show_macd) + int(show_rsi)
+    heights = [0.70 - 0.06 * (n_rows - 2)] + [0.10] * (n_rows - 2) + [0.20]
+    fig = make_subplots(
+        rows=n_rows, cols=1, shared_xaxes=True, row_heights=heights, vertical_spacing=0.02
+    )
 
     fig.add_trace(
         go.Candlestick(
@@ -70,18 +74,49 @@ def build_chart(df: pd.DataFrame, show_ma: bool, show_boll: bool, show_ema: bool
     colors = ["red" if c >= o else "green" for c, o in zip(df["close"], df["open"])]
     fig.add_trace(
         go.Bar(x=df["date"], y=df["volume"], name="成交量", marker_color=colors),
-        row=2,
+        row=n_rows,
         col=1,
     )
 
+    row = 2
+    if show_macd and "macd_dif" in df.columns:
+        fig.add_trace(
+            go.Scatter(x=df["date"], y=df["macd_dif"], name="MACD DIF", line=dict(color="orange", width=1)),
+            row=row, col=1,
+        )
+        fig.add_trace(
+            go.Scatter(x=df["date"], y=df["macd_dea"], name="MACD DEA", line=dict(color="blue", width=1)),
+            row=row, col=1,
+        )
+        macd_colors = ["red" if v >= 0 else "green" for v in df["macd_hist"].fillna(0)]
+        fig.add_trace(
+            go.Bar(x=df["date"], y=df["macd_hist"].fillna(0), name="MACD柱", marker_color=macd_colors),
+            row=row, col=1,
+        )
+        row += 1
+    if show_rsi and "rsi14" in df.columns:
+        fig.add_trace(
+            go.Scatter(x=df["date"], y=df["rsi14"], name="RSI(14)", line=dict(color="purple", width=1)),
+            row=row, col=1,
+        )
+        fig.add_hline(y=70, line_dash="dot", line_color="red", row=row, col=1)
+        fig.add_hline(y=30, line_dash="dot", line_color="green", row=row, col=1)
+        row += 1
+
     fig.update_layout(
-        height=650,
+        height=700,
         xaxis_rangeslider_visible=False,
         legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
         margin=dict(l=10, r=10, t=40, b=10),
     )
     fig.update_yaxes(title_text="价格", row=1, col=1)
-    fig.update_yaxes(title_text="成交量", row=2, col=1)
+    fig.update_yaxes(title_text="成交量", row=n_rows, col=1)
+    if show_macd and "macd_dif" in df.columns:
+        fig.update_yaxes(title_text="MACD", row=2, col=1)
+    if show_rsi and "rsi14" in df.columns:
+        rsi_row = 3 if show_macd else 2
+        fig.update_yaxes(title_text="RSI", row=rsi_row, col=1)
+        fig.update_yaxes(range=[0, 100], row=rsi_row, col=1)
     return fig
 
 
@@ -116,12 +151,14 @@ def show():
             df = add_all_indicators(df)
 
             st.subheader("技术指标叠加")
-            c1, c2, c3 = st.columns(3)
-            show_ma = c1.checkbox("均线 MA5/10/20", value=True)
-            show_ema = c2.checkbox("EMA5/20", value=False)
-            show_boll = c3.checkbox("布林带 BOLL", value=False)
+            c1, c2, c3, c4, c5 = st.columns(5)
+            show_ma = c1.checkbox("均线 MA", value=True)
+            show_ema = c2.checkbox("EMA", value=False)
+            show_boll = c3.checkbox("布林带", value=False)
+            show_macd = c4.checkbox("MACD", value=True)
+            show_rsi = c5.checkbox("RSI", value=False)
 
-            st.plotly_chart(build_chart(df, show_ma, show_boll, show_ema), use_container_width=True)
+            st.plotly_chart(build_chart(df, show_ma, show_boll, show_ema, show_macd, show_rsi), use_container_width=True)
 
             st.subheader("最新技术指标")
             last = df.iloc[-1]

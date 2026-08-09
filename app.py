@@ -7,6 +7,10 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+from ui.theme import setup_theme
+
+setup_theme()
+
 st.sidebar.title("A股模拟盘回测系统")
 
 page = st.sidebar.radio(

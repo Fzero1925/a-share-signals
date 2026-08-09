@@ -1,3 +1,5 @@
+import os
+
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
@@ -129,9 +131,56 @@ def build_result_charts(result: dict, df: pd.DataFrame, stock_code: str):
     return fig
 
 
+def show_full_market_tab():
+    st.subheader("🌐 全市场动量策略验证（每日调仓 Top N）")
+    csv_path = os.path.join("reports", "backtest_summary.csv")
+    if not os.path.exists(csv_path):
+        st.info("尚未运行全市场回测验证。本地执行 `python scripts/backtest_validate.py` 生成结果。")
+        return
+
+    df = pd.read_csv(csv_path, encoding="utf-8-sig")
+    df["总收益%"] = (df["总收益"] * 100).round(1)
+    df["年化%"] = (df["年化"] * 100).round(1)
+    df["最大回撤%"] = (df["最大回撤"] * 100).round(1)
+
+    st.dataframe(
+        df[["时段", "top_n", "总收益%", "年化%", "最大回撤%", "夏普", "胜率", "交易次数"]],
+        use_container_width=True,
+    )
+
+    st.markdown("**参数热力图（各时段 × top_n 总收益）**")
+    pivot = df.pivot_table(index="时段", columns="top_n", values="总收益", aggfunc="mean")
+    fig = go.Figure(
+        go.Heatmap(
+            z=pivot.values * 100,
+            x=pivot.columns,
+            y=pivot.index,
+            colorscale="RdYlGn",
+            text=[[f"{v:.1f}%" for v in row] for row in pivot.values * 100],
+            texttemplate="%{text}",
+            zmin=-50,
+            zmax=250,
+        )
+    )
+    fig.update_layout(height=300, margin=dict(l=10, r=10, t=30, b=10))
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.caption("注意：股票池为当前活跃股，存在幸存者偏差，实际历史表现可能低于回测结果。")
+
+
 def show():
     st.title("📈 策略回测")
 
+    tab_single, tab_full = st.tabs(["📊 单股策略回测", "🌐 全市场验证"])
+
+    with tab_full:
+        show_full_market_tab()
+
+    with tab_single:
+        show_single_tab()
+
+
+def show_single_tab():
     col1, col2, col3, col4 = st.columns([1.2, 1, 1, 1])
     with col1:
         strategy_name = st.selectbox("选择策略", list(STRATEGY_REGISTRY.keys()))
