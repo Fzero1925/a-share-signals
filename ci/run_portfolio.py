@@ -8,6 +8,7 @@ import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config.settings import PORTFOLIO_DIR, SIGNALS_DIR
+from core.calendar import is_trading_day
 from core.data_manager import DataManager
 from core.indicators import add_all_indicators
 from core.portfolio_engine import PortfolioEngine
@@ -35,6 +36,10 @@ def fetch_history_batch(dm: DataManager, codes: list[str]) -> dict:
 
 
 def main() -> int:
+    if not is_trading_day():
+        print("今日非交易日（周末或节假日），跳过组合调仓")
+        return 0
+
     dm = DataManager()
 
     pool = build_candidate_pool(min_amount=3e8, max_pages=5, max_candidates=300)
@@ -75,6 +80,10 @@ def main() -> int:
     engine = PortfolioEngine(INITIAL_CAPITAL)
     if os.path.exists(PORTFOLIO_FILE):
         engine.load_state(PORTFOLIO_FILE)
+
+    if engine.equity_history and engine.equity_history[-1].get("date") == date_str:
+        print(f"今日({date_str})已执行过调仓，跳过")
+        return 0
 
     report = engine.execute_rebalance(
         date=date_str,

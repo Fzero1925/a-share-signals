@@ -8,6 +8,7 @@ import pandas as pd
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from config.settings import MONITOR_STOCKS, SIGNALS_DIR
+from core.calendar import is_trading_day
 from core.data_manager import DataManager
 from core.indicators import add_all_indicators
 from strategies.momentum import MomentumStrategy
@@ -80,6 +81,10 @@ def fetch_market_summary(dm: DataManager) -> dict:
 
 
 def main() -> int:
+    if not is_trading_day():
+        print("今日非交易日（周末或节假日），跳过信号生成")
+        return 0
+
     dm = DataManager()
     os.makedirs(SIGNALS_DIR, exist_ok=True)
 
