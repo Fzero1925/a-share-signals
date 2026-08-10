@@ -17,10 +17,19 @@ ACTION_STYLE = {
 ACTION_LABEL = {"BUY": "买入", "SELL": "卖出", "HOLD": "观望"}
 
 
-def build_html(data: dict, page_title: str = None, extra_html: str = "") -> str:
+def build_html(data: dict, page_title: str = None, extra_html: str = "", is_history: bool = False) -> str:
     date = data.get("date", datetime.now().strftime("%Y-%m-%d"))
     generated = data.get("generated_at", "")
     title = page_title or f"A股信号 {date}"
+
+    nav_html = ""
+    if is_history:
+        nav_html = (
+            '<div style="margin-bottom:16px;">'
+            '<a href="../index.html" style="display:inline-block;padding:8px 18px;'
+            'background:#2196f3;color:#fff;border-radius:6px;text-decoration:none;'
+            'font-size:14px;">← 返回今日信号</a></div>'
+        )
 
     summary_html = ""
     market = data.get("market_summary", {})
@@ -115,6 +124,7 @@ td {{ padding:10px 20px; border-top:1px solid #f0f0f0; }}
 </head>
 <body>
 <div class="container">
+{nav_html}
 <h1>📈 A股策略信号 {html.escape(date)}</h1>
 <div class="sub">生成时间: {html.escape(generated)}</div>
 <div class="indexes">{summary_html}</div>
@@ -228,7 +238,12 @@ def build_history_list(history_dir: str) -> str:
     if not files:
         return ""
     items = "".join(f'<li><a href="history/{html.escape(f)}">{html.escape(f.replace(".html", ""))}</a></li>' for f in files[:30])
-    return f'<h2 style="font-size:18px;margin:24px 0 10px;">历史信号</h2><ul style="list-style:none">{items}</ul>'
+    return (
+        f'<h2 style="font-size:18px;margin:24px 0 10px;">历史信号</h2>'
+        f'<ul style="list-style:none">{items}</ul>'
+        f'<p style="font-size:12px;color:#999;margin-top:6px;">'
+        f'共 {len(files)} 天记录，全部永久保存在仓库（GitHub Actions 每日自动归档）</p>'
+    )
 
 
 def main() -> int:
@@ -254,7 +269,7 @@ def main() -> int:
 
     history_path = os.path.join(PUBLIC_DIR, "history", f"{date.replace('-', '')}.html")
     with open(history_path, "w", encoding="utf-8") as f:
-        f.write(build_html(data, extra_html=portfolio_html))
+        f.write(build_html(data, extra_html=portfolio_html, is_history=True))
 
     print(f"报告已生成: {os.path.join(PUBLIC_DIR, 'index.html')}")
     return 0
