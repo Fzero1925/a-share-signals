@@ -1,8 +1,8 @@
 {
   "initial_capital": 100000.0,
-  "cash": 9272.62124,
+  "cash": 6819.22536,
   "created_at": "2026-08-08 00:31:10",
-  "updated_at": "2026-08-08 00:31:10",
+  "updated_at": "2026-08-11 16:43:36",
   "positions": {
     "300209": {
       "shares": 500,
@@ -32,12 +32,12 @@
       "reason": "调仓买入",
       "name": "创世纪"
     },
-    "603259": {
-      "shares": 100,
-      "entry_price": 154.82,
-      "entry_date": "2026-08-07",
+    "000603": {
+      "shares": 500,
+      "entry_price": 37.12,
+      "entry_date": "2026-08-11",
       "reason": "调仓买入",
-      "name": "药明康德"
+      "name": "盛达资源"
     }
   },
   "trade_history": [
@@ -90,6 +90,28 @@
       "shares": 100,
       "cost": 5.31,
       "reason": "调仓买入"
+    },
+    {
+      "date": "2026-08-11",
+      "code": "603259",
+      "name": "药明康德",
+      "action": "SELL",
+      "price": 161.34,
+      "shares": 100,
+      "cost": 21.46,
+      "pnl": 625.23,
+      "pnl_pct": 0.040371,
+      "reason": "调仓卖出"
+    },
+    {
+      "date": "2026-08-11",
+      "code": "000603",
+      "name": "盛达资源",
+      "action": "BUY",
+      "price": 37.12,
+      "shares": 500,
+      "cost": 5.94,
+      "reason": "调仓买入"
     }
   ],
   "equity_history": [
@@ -97,6 +119,12 @@
       "date": "2026-08-07",
       "equity": 99970.62,
       "cash": 9272.62,
+      "positions": 5
+    },
+    {
+      "date": "2026-08-11",
+      "equity": 44574.23,
+      "cash": 6819.23,
       "positions": 5
     }
   ]

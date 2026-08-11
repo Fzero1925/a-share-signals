@@ -1,93 +1,106 @@
 {
-  "date": "2026-08-07",
-  "generated_at": "2026-08-08 00:31:10",
+  "date": "2026-08-11",
+  "generated_at": "2026-08-11 16:43:36",
   "strategy": "DailyMomentum",
-  "pool_size": 172,
+  "pool_size": 96,
   "selected": [
+    {
+      "code": "000603",
+      "name": "盛达资源",
+      "close": 37.12,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "300139",
+      "name": "晓程科技",
+      "close": 52.49,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "300759",
+      "name": "康龙化成",
+      "close": 47.03,
+      "target_amount": 20000.0
+    },
     {
       "code": "300209",
       "name": "行云科技",
-      "close": 37.19,
+      "close": 38.39,
       "target_amount": 20000.0
     },
     {
-      "code": "603039",
-      "name": "泛微网络",
-      "close": 45.58,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "301171",
-      "name": "易点天下",
-      "close": 39.13,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "300083",
-      "name": "创世纪",
-      "close": 14.48,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "603259",
-      "name": "药明康德",
-      "close": 154.82,
+      "code": "603228",
+      "name": "景旺电子",
+      "close": 96.0,
       "target_amount": 20000.0
     }
   ],
   "rebalance": {
-    "sold": [],
+    "sold": [
+      {
+        "code": "603259",
+        "price": 161.34
+      }
+    ],
     "bought": [
       {
-        "code": "300209",
-        "name": "行云科技",
+        "code": "000603",
+        "name": "盛达资源",
         "shares": 500,
-        "price": 37.19
-      },
+        "price": 37.12
+      }
+    ],
+    "blocked": [
       {
         "code": "603039",
-        "name": "泛微网络",
-        "shares": 400,
-        "price": 45.58
+        "reason": "无行情"
       },
       {
         "code": "301171",
-        "name": "易点天下",
-        "shares": 500,
-        "price": 39.13
+        "reason": "无行情"
       },
       {
         "code": "300083",
-        "name": "创世纪",
-        "shares": 1300,
-        "price": 14.48
-      },
-      {
-        "code": "603259",
-        "name": "药明康德",
-        "shares": 100,
-        "price": 154.82
+        "reason": "无行情"
       }
     ],
-    "blocked": [],
-    "skipped": []
+    "skipped": [
+      {
+        "code": "300139",
+        "reason": "现金不足"
+      },
+      {
+        "code": "300759",
+        "reason": "现金不足"
+      },
+      {
+        "code": "603228",
+        "reason": "现金不足"
+      }
+    ]
   },
   "performance": {
-    "total_equity": 99970.62,
-    "total_return": -0.0002937875999998729,
-    "total_profit": -29.378759999992326,
-    "cash": 9272.62,
-    "position_value": 90698.0,
+    "total_equity": 44574.23,
+    "total_return": -0.5542577464,
+    "total_profit": -55425.77464,
+    "cash": 6819.23,
+    "position_value": 37755.0,
     "positions": 5,
-    "win_trades": 0,
+    "win_trades": 1,
     "loss_trades": 0,
-    "total_trades": 0
+    "total_trades": 1
   },
   "equity_history": [
     {
       "date": "2026-08-07",
       "equity": 99970.62,
       "cash": 9272.62,
+      "positions": 5
+    },
+    {
+      "date": "2026-08-11",
+      "equity": 44574.23,
+      "cash": 6819.23,
       "positions": 5
     }
   ],
@@ -98,7 +111,7 @@
       "shares": 500,
       "entry_price": 37.19,
       "entry_date": "2026-08-07",
-      "current_price": 37.19
+      "current_price": 38.39
     },
     {
       "code": "603039",
@@ -125,12 +138,12 @@
       "current_price": 14.48
     },
     {
-      "code": "603259",
-      "name": "药明康德",
-      "shares": 100,
-      "entry_price": 154.82,
-      "entry_date": "2026-08-07",
-      "current_price": 154.82
+      "code": "000603",
+      "name": "盛达资源",
+      "shares": 500,
+      "entry_price": 37.12,
+      "entry_date": "2026-08-11",
+      "current_price": 37.12
     }
   ]
 }
