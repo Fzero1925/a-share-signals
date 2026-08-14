@@ -1,76 +1,84 @@
 {
-  "date": "2026-08-11",
-  "generated_at": "2026-08-11 16:43:36",
+  "date": "2026-08-14",
+  "generated_at": "2026-08-14 16:56:37",
   "strategy": "DailyMomentum",
-  "pool_size": 96,
+  "pool_size": 91,
   "selected": [
     {
-      "code": "000603",
-      "name": "盛达资源",
-      "close": 37.12,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "300139",
-      "name": "晓程科技",
-      "close": 52.49,
+      "code": "002437",
+      "name": "誉衡药业",
+      "close": 4.53,
       "target_amount": 20000.0
     },
     {
       "code": "300759",
       "name": "康龙化成",
-      "close": 47.03,
+      "close": 49.8,
       "target_amount": 20000.0
     },
     {
-      "code": "300209",
-      "name": "行云科技",
-      "close": 38.39,
+      "code": "301165",
+      "name": "锐捷网络",
+      "close": 143.3,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "600667",
+      "name": "太极实业",
+      "close": 23.78,
       "target_amount": 20000.0
     },
     {
       "code": "603228",
       "name": "景旺电子",
-      "close": 96.0,
+      "close": 97.2,
       "target_amount": 20000.0
     }
   ],
   "rebalance": {
     "sold": [
       {
-        "code": "603259",
-        "price": 161.34
+        "code": "301171",
+        "price": 37.4
       }
     ],
     "bought": [
       {
-        "code": "000603",
-        "name": "盛达资源",
-        "shares": 500,
-        "price": 37.12
+        "code": "002437",
+        "name": "誉衡药业",
+        "shares": 4400,
+        "price": 4.53
       }
     ],
     "blocked": [
+      {
+        "code": "300209",
+        "reason": "无行情"
+      },
       {
         "code": "603039",
         "reason": "无行情"
       },
       {
-        "code": "301171",
+        "code": "300083",
         "reason": "无行情"
       },
       {
-        "code": "300083",
+        "code": "000603",
         "reason": "无行情"
+      },
+      {
+        "code": "301165",
+        "reason": "涨停买不进"
       }
     ],
     "skipped": [
       {
-        "code": "300139",
+        "code": "300759",
         "reason": "现金不足"
       },
       {
-        "code": "300759",
+        "code": "600667",
         "reason": "现金不足"
       },
       {
@@ -80,15 +88,15 @@
     ]
   },
   "performance": {
-    "total_equity": 44574.23,
-    "total_return": -0.5542577464,
-    "total_profit": -55425.77464,
-    "cash": 6819.23,
-    "position_value": 37755.0,
+    "total_equity": 25488.16,
+    "total_return": -0.7451183688,
+    "total_profit": -74511.83688,
+    "cash": 5556.16,
+    "position_value": 19932.0,
     "positions": 5,
     "win_trades": 1,
-    "loss_trades": 0,
-    "total_trades": 1
+    "loss_trades": 1,
+    "total_trades": 2
   },
   "equity_history": [
     {
@@ -102,6 +110,12 @@
       "equity": 44574.23,
       "cash": 6819.23,
       "positions": 5
+    },
+    {
+      "date": "2026-08-14",
+      "equity": 25488.16,
+      "cash": 5556.16,
+      "positions": 5
     }
   ],
   "positions": [
@@ -111,7 +125,7 @@
       "shares": 500,
       "entry_price": 37.19,
       "entry_date": "2026-08-07",
-      "current_price": 38.39
+      "current_price": 37.19
     },
     {
       "code": "603039",
@@ -120,14 +134,6 @@
       "entry_price": 45.58,
       "entry_date": "2026-08-07",
       "current_price": 45.58
-    },
-    {
-      "code": "301171",
-      "name": "易点天下",
-      "shares": 500,
-      "entry_price": 39.13,
-      "entry_date": "2026-08-07",
-      "current_price": 39.13
     },
     {
       "code": "300083",
@@ -144,6 +150,14 @@
       "entry_price": 37.12,
       "entry_date": "2026-08-11",
       "current_price": 37.12
+    },
+    {
+      "code": "002437",
+      "name": "誉衡药业",
+      "shares": 4400,
+      "entry_price": 4.53,
+      "entry_date": "2026-08-14",
+      "current_price": 4.53
     }
   ]
 }
