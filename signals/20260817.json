@@ -1,6 +1,6 @@
 {
   "date": "2026-08-17",
-  "generated_at": "2026-08-17 15:40:24",
+  "generated_at": "2026-08-17 19:33:32",
   "market_summary": {
     "shanghai": {
       "close": 3982.65,
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1341.99,
-          "pct_change": -0.98,
-          "rsi14": 59.1,
-          "adx14": 33.2
+          "close": 1293.09,
+          "pct_change": -3.64,
+          "rsi14": 47.2,
+          "adx14": 31.2
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1341.99,
-          "pct_change": -0.98,
-          "rsi14": 59.1,
-          "adx14": 33.2
+          "close": 1293.09,
+          "pct_change": -3.64,
+          "rsi14": 47.2,
+          "adx14": 31.2
         }
       ],
       "name": "贵州茅台"
@@ -115,19 +115,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 38.46,
-          "pct_change": -0.8,
-          "rsi14": 49.0,
-          "adx14": 22.6
+          "close": 38.2,
+          "pct_change": -0.68,
+          "rsi14": 46.5,
+          "adx14": 21.6
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 38.46,
-          "pct_change": -0.8,
-          "rsi14": 49.0,
-          "adx14": 22.6
+          "close": 38.2,
+          "pct_change": -0.68,
+          "rsi14": 46.5,
+          "adx14": 21.6
         }
       ],
       "name": "招商银行"

@@ -1,16 +1,9 @@
 {
   "initial_capital": 100000.0,
-  "cash": 5556.163120000001,
+  "cash": 5478.922720000002,
   "created_at": "2026-08-08 00:31:10",
-  "updated_at": "2026-08-14 16:56:37",
+  "updated_at": "2026-08-17 19:45:00",
   "positions": {
-    "300209": {
-      "shares": 500,
-      "entry_price": 37.19,
-      "entry_date": "2026-08-07",
-      "reason": "调仓买入",
-      "name": "行云科技"
-    },
     "603039": {
       "shares": 400,
       "entry_price": 45.58,
@@ -38,6 +31,13 @@
       "entry_date": "2026-08-14",
       "reason": "调仓买入",
       "name": "誉衡药业"
+    },
+    "600186": {
+      "shares": 1500,
+      "entry_price": 13.13,
+      "entry_date": "2026-08-17",
+      "reason": "调仓买入",
+      "name": "莲花控股"
     }
   },
   "trade_history": [
@@ -134,6 +134,28 @@
       "shares": 4400,
       "cost": 6.38,
       "reason": "调仓买入"
+    },
+    {
+      "date": "2026-08-17",
+      "code": "300209",
+      "name": "行云科技",
+      "action": "SELL",
+      "price": 39.3,
+      "shares": 500,
+      "cost": 25.94,
+      "pnl": 1023.11,
+      "pnl_pct": 0.055003,
+      "reason": "调仓卖出"
+    },
+    {
+      "date": "2026-08-17",
+      "code": "600186",
+      "name": "莲花控股",
+      "action": "BUY",
+      "price": 13.13,
+      "shares": 1500,
+      "cost": 6.3,
+      "reason": "调仓买入"
     }
   ],
   "equity_history": [
@@ -153,6 +175,12 @@
       "date": "2026-08-14",
       "equity": 25488.16,
       "cash": 5556.16,
+      "positions": 5
+    },
+    {
+      "date": "2026-08-17",
+      "equity": 25173.92,
+      "cash": 5478.92,
       "positions": 5
     }
   ]

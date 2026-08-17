@@ -1,60 +1,56 @@
 {
-  "date": "2026-08-14",
-  "generated_at": "2026-08-14 16:56:37",
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17 19:45:00",
   "strategy": "DailyMomentum",
   "pool_size": 91,
   "selected": [
     {
-      "code": "002437",
-      "name": "誉衡药业",
-      "close": 4.53,
+      "code": "600186",
+      "name": "莲花控股",
+      "close": 13.13,
       "target_amount": 20000.0
     },
     {
-      "code": "300759",
-      "name": "康龙化成",
-      "close": 49.8,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "301165",
-      "name": "锐捷网络",
-      "close": 143.3,
+      "code": "603629",
+      "name": "利通电子",
+      "close": 142.84,
       "target_amount": 20000.0
     },
     {
       "code": "600667",
       "name": "太极实业",
-      "close": 23.78,
+      "close": 23.86,
       "target_amount": 20000.0
     },
     {
-      "code": "603228",
-      "name": "景旺电子",
-      "close": 97.2,
+      "code": "300017",
+      "name": "网宿科技",
+      "close": 17.57,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "002428",
+      "name": "云南锗业",
+      "close": 109.65,
       "target_amount": 20000.0
     }
   ],
   "rebalance": {
     "sold": [
       {
-        "code": "301171",
-        "price": 37.4
+        "code": "300209",
+        "price": 39.3
       }
     ],
     "bought": [
       {
-        "code": "002437",
-        "name": "誉衡药业",
-        "shares": 4400,
-        "price": 4.53
+        "code": "600186",
+        "name": "莲花控股",
+        "shares": 1500,
+        "price": 13.13
       }
     ],
     "blocked": [
-      {
-        "code": "300209",
-        "reason": "无行情"
-      },
       {
         "code": "603039",
         "reason": "无行情"
@@ -68,13 +64,13 @@
         "reason": "无行情"
       },
       {
-        "code": "301165",
-        "reason": "涨停买不进"
+        "code": "002437",
+        "reason": "无行情"
       }
     ],
     "skipped": [
       {
-        "code": "300759",
+        "code": "603629",
         "reason": "现金不足"
       },
       {
@@ -82,21 +78,25 @@
         "reason": "现金不足"
       },
       {
-        "code": "603228",
+        "code": "300017",
+        "reason": "现金不足"
+      },
+      {
+        "code": "002428",
         "reason": "现金不足"
       }
     ]
   },
   "performance": {
-    "total_equity": 25488.16,
-    "total_return": -0.7451183688,
-    "total_profit": -74511.83688,
-    "cash": 5556.16,
-    "position_value": 19932.0,
+    "total_equity": 25173.92,
+    "total_return": -0.7482607727999999,
+    "total_profit": -74826.07728,
+    "cash": 5478.92,
+    "position_value": 19695.0,
     "positions": 5,
-    "win_trades": 1,
+    "win_trades": 2,
     "loss_trades": 1,
-    "total_trades": 2
+    "total_trades": 3
   },
   "equity_history": [
     {
@@ -116,17 +116,15 @@
       "equity": 25488.16,
       "cash": 5556.16,
       "positions": 5
+    },
+    {
+      "date": "2026-08-17",
+      "equity": 25173.92,
+      "cash": 5478.92,
+      "positions": 5
     }
   ],
   "positions": [
-    {
-      "code": "300209",
-      "name": "行云科技",
-      "shares": 500,
-      "entry_price": 37.19,
-      "entry_date": "2026-08-07",
-      "current_price": 37.19
-    },
     {
       "code": "603039",
       "name": "泛微网络",
@@ -158,6 +156,14 @@
       "entry_price": 4.53,
       "entry_date": "2026-08-14",
       "current_price": 4.53
+    },
+    {
+      "code": "600186",
+      "name": "莲花控股",
+      "shares": 1500,
+      "entry_price": 13.13,
+      "entry_date": "2026-08-17",
+      "current_price": 13.13
     }
   ]
 }
