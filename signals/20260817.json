@@ -1,14 +1,14 @@
 {
   "date": "2026-08-17",
-  "generated_at": "2026-08-17 10:53:39",
+  "generated_at": "2026-08-17 13:24:42",
   "market_summary": {
     "shanghai": {
-      "close": 3951.14,
-      "pct_change": 0.61
+      "close": 3963.21,
+      "pct_change": 0.92
     },
     "shenzhen": {
-      "close": 14502.13,
-      "pct_change": 1.03
+      "close": 14607.78,
+      "pct_change": 1.77
     }
   },
   "signals": [
