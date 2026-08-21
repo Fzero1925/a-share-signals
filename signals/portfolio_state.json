@@ -1,8 +1,8 @@
 {
   "initial_capital": 100000.0,
-  "cash": 5478.922720000002,
+  "cash": 4331.414120000001,
   "created_at": "2026-08-08 00:31:10",
-  "updated_at": "2026-08-17 19:45:00",
+  "updated_at": "2026-08-21 16:18:44",
   "positions": {
     "603039": {
       "shares": 400,
@@ -32,12 +32,12 @@
       "reason": "调仓买入",
       "name": "誉衡药业"
     },
-    "600186": {
-      "shares": 1500,
-      "entry_price": 13.13,
-      "entry_date": "2026-08-17",
+    "600547": {
+      "shares": 500,
+      "entry_price": 35.3,
+      "entry_date": "2026-08-21",
       "reason": "调仓买入",
-      "name": "莲花控股"
+      "name": "XD山东黄"
     }
   },
   "trade_history": [
@@ -156,6 +156,28 @@
       "shares": 1500,
       "cost": 6.3,
       "reason": "调仓买入"
+    },
+    {
+      "date": "2026-08-21",
+      "code": "600186",
+      "name": "莲花控股",
+      "action": "SELL",
+      "price": 11.02,
+      "shares": 1500,
+      "cost": 21.86,
+      "pnl": -3193.16,
+      "pnl_pct": -0.162079,
+      "reason": "调仓卖出"
+    },
+    {
+      "date": "2026-08-21",
+      "code": "600547",
+      "name": "XD山东黄",
+      "action": "BUY",
+      "price": 35.3,
+      "shares": 500,
+      "cost": 5.65,
+      "reason": "调仓买入"
     }
   ],
   "equity_history": [
@@ -181,6 +203,12 @@
       "date": "2026-08-17",
       "equity": 25173.92,
       "cash": 5478.92,
+      "positions": 5
+    },
+    {
+      "date": "2026-08-21",
+      "equity": 42793.41,
+      "cash": 4331.41,
       "positions": 5
     }
   ]

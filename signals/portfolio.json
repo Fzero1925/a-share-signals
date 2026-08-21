@@ -1,53 +1,53 @@
 {
-  "date": "2026-08-17",
-  "generated_at": "2026-08-17 19:45:00",
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21 16:18:44",
   "strategy": "DailyMomentum",
-  "pool_size": 91,
+  "pool_size": 95,
   "selected": [
     {
-      "code": "600186",
-      "name": "莲花控股",
-      "close": 13.13,
+      "code": "002437",
+      "name": "誉衡药业",
+      "close": 4.73,
       "target_amount": 20000.0
     },
     {
-      "code": "603629",
-      "name": "利通电子",
-      "close": 142.84,
+      "code": "300570",
+      "name": "太辰光",
+      "close": 213.4,
       "target_amount": 20000.0
     },
     {
-      "code": "600667",
-      "name": "太极实业",
-      "close": 23.86,
+      "code": "600547",
+      "name": "XD山东黄",
+      "close": 35.3,
       "target_amount": 20000.0
     },
     {
-      "code": "300017",
-      "name": "网宿科技",
-      "close": 17.57,
+      "code": "600206",
+      "name": "XD有研新",
+      "close": 56.657,
       "target_amount": 20000.0
     },
     {
-      "code": "002428",
-      "name": "云南锗业",
-      "close": 109.65,
+      "code": "688143",
+      "name": "长盈通",
+      "close": 149.5,
       "target_amount": 20000.0
     }
   ],
   "rebalance": {
     "sold": [
       {
-        "code": "300209",
-        "price": 39.3
+        "code": "600186",
+        "price": 11.02
       }
     ],
     "bought": [
       {
-        "code": "600186",
-        "name": "莲花控股",
-        "shares": 1500,
-        "price": 13.13
+        "code": "600547",
+        "name": "XD山东黄",
+        "shares": 500,
+        "price": 35.3
       }
     ],
     "blocked": [
@@ -65,38 +65,34 @@
       },
       {
         "code": "002437",
-        "reason": "无行情"
+        "reason": "涨停买不进"
       }
     ],
     "skipped": [
       {
-        "code": "603629",
+        "code": "300570",
+        "reason": "资金不足1手"
+      },
+      {
+        "code": "600206",
         "reason": "现金不足"
       },
       {
-        "code": "600667",
-        "reason": "现金不足"
-      },
-      {
-        "code": "300017",
-        "reason": "现金不足"
-      },
-      {
-        "code": "002428",
+        "code": "688143",
         "reason": "现金不足"
       }
     ]
   },
   "performance": {
-    "total_equity": 25173.92,
-    "total_return": -0.7482607727999999,
-    "total_profit": -74826.07728,
-    "cash": 5478.92,
-    "position_value": 19695.0,
+    "total_equity": 42793.41,
+    "total_return": -0.5720658588,
+    "total_profit": -57206.58588,
+    "cash": 4331.41,
+    "position_value": 38462.0,
     "positions": 5,
     "win_trades": 2,
-    "loss_trades": 1,
-    "total_trades": 3
+    "loss_trades": 2,
+    "total_trades": 4
   },
   "equity_history": [
     {
@@ -121,6 +117,12 @@
       "date": "2026-08-17",
       "equity": 25173.92,
       "cash": 5478.92,
+      "positions": 5
+    },
+    {
+      "date": "2026-08-21",
+      "equity": 42793.41,
+      "cash": 4331.41,
       "positions": 5
     }
   ],
@@ -155,15 +157,15 @@
       "shares": 4400,
       "entry_price": 4.53,
       "entry_date": "2026-08-14",
-      "current_price": 4.53
+      "current_price": 4.73
     },
     {
-      "code": "600186",
-      "name": "莲花控股",
-      "shares": 1500,
-      "entry_price": 13.13,
-      "entry_date": "2026-08-17",
-      "current_price": 13.13
+      "code": "600547",
+      "name": "XD山东黄",
+      "shares": 500,
+      "entry_price": 35.3,
+      "entry_date": "2026-08-21",
+      "current_price": 35.3
     }
   ]
 }
