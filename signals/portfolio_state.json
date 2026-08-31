@@ -1,8 +1,8 @@
 {
   "initial_capital": 100000.0,
-  "cash": 4331.414120000001,
+  "cash": 3961.268640000002,
   "created_at": "2026-08-08 00:31:10",
-  "updated_at": "2026-08-21 16:18:44",
+  "updated_at": "2026-08-31 23:28:21",
   "positions": {
     "603039": {
       "shares": 400,
@@ -32,12 +32,12 @@
       "reason": "调仓买入",
       "name": "誉衡药业"
     },
-    "600547": {
-      "shares": 500,
-      "entry_price": 35.3,
-      "entry_date": "2026-08-21",
+    "600127": {
+      "shares": 1600,
+      "entry_price": 12.04,
+      "entry_date": "2026-08-31",
       "reason": "调仓买入",
-      "name": "XD山东黄"
+      "name": "金健米业"
     }
   },
   "trade_history": [
@@ -178,6 +178,28 @@
       "shares": 500,
       "cost": 5.65,
       "reason": "调仓买入"
+    },
+    {
+      "date": "2026-08-31",
+      "code": "600547",
+      "name": "XD山东黄",
+      "action": "SELL",
+      "price": 37.85,
+      "shares": 500,
+      "cost": 24.98,
+      "pnl": 1244.37,
+      "pnl_pct": 0.07048,
+      "reason": "调仓卖出"
+    },
+    {
+      "date": "2026-08-31",
+      "code": "600127",
+      "name": "金健米业",
+      "action": "BUY",
+      "price": 12.04,
+      "shares": 1600,
+      "cost": 6.16,
+      "reason": "调仓买入"
     }
   ],
   "equity_history": [
@@ -209,6 +231,12 @@
       "date": "2026-08-21",
       "equity": 42793.41,
       "cash": 4331.41,
+      "positions": 5
+    },
+    {
+      "date": "2026-08-31",
+      "equity": 23225.27,
+      "cash": 3961.27,
       "positions": 5
     }
   ]

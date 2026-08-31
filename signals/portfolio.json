@@ -1,53 +1,53 @@
 {
-  "date": "2026-08-21",
-  "generated_at": "2026-08-21 16:18:44",
+  "date": "2026-08-31",
+  "generated_at": "2026-08-31 23:28:21",
   "strategy": "DailyMomentum",
-  "pool_size": 95,
+  "pool_size": 94,
   "selected": [
     {
-      "code": "002437",
-      "name": "誉衡药业",
-      "close": 4.73,
+      "code": "600127",
+      "name": "金健米业",
+      "close": 12.04,
       "target_amount": 20000.0
     },
     {
-      "code": "300570",
-      "name": "太辰光",
-      "close": 213.4,
+      "code": "688300",
+      "name": "联瑞新材",
+      "close": 193.0,
       "target_amount": 20000.0
     },
     {
-      "code": "600547",
-      "name": "XD山东黄",
-      "close": 35.3,
+      "code": "688205",
+      "name": "德科立",
+      "close": 184.77,
       "target_amount": 20000.0
     },
     {
-      "code": "600206",
-      "name": "XD有研新",
-      "close": 56.657,
+      "code": "002837",
+      "name": "英维克",
+      "close": 68.21,
       "target_amount": 20000.0
     },
     {
-      "code": "688143",
-      "name": "长盈通",
-      "close": 149.5,
+      "code": "600183",
+      "name": "生益科技",
+      "close": 153.4,
       "target_amount": 20000.0
     }
   ],
   "rebalance": {
     "sold": [
       {
-        "code": "600186",
-        "price": 11.02
+        "code": "600547",
+        "price": 37.85
       }
     ],
     "bought": [
       {
-        "code": "600547",
-        "name": "XD山东黄",
-        "shares": 500,
-        "price": 35.3
+        "code": "600127",
+        "name": "金健米业",
+        "shares": 1600,
+        "price": 12.04
       }
     ],
     "blocked": [
@@ -65,34 +65,38 @@
       },
       {
         "code": "002437",
-        "reason": "涨停买不进"
+        "reason": "无行情"
       }
     ],
     "skipped": [
       {
-        "code": "300570",
-        "reason": "资金不足1手"
-      },
-      {
-        "code": "600206",
+        "code": "688300",
         "reason": "现金不足"
       },
       {
-        "code": "688143",
+        "code": "688205",
+        "reason": "现金不足"
+      },
+      {
+        "code": "002837",
+        "reason": "现金不足"
+      },
+      {
+        "code": "600183",
         "reason": "现金不足"
       }
     ]
   },
   "performance": {
-    "total_equity": 42793.41,
-    "total_return": -0.5720658588,
-    "total_profit": -57206.58588,
-    "cash": 4331.41,
-    "position_value": 38462.0,
+    "total_equity": 23225.27,
+    "total_return": -0.7677473135999999,
+    "total_profit": -76774.73136,
+    "cash": 3961.27,
+    "position_value": 19264.0,
     "positions": 5,
-    "win_trades": 2,
+    "win_trades": 3,
     "loss_trades": 2,
-    "total_trades": 4
+    "total_trades": 5
   },
   "equity_history": [
     {
@@ -123,6 +127,12 @@
       "date": "2026-08-21",
       "equity": 42793.41,
       "cash": 4331.41,
+      "positions": 5
+    },
+    {
+      "date": "2026-08-31",
+      "equity": 23225.27,
+      "cash": 3961.27,
       "positions": 5
     }
   ],
@@ -157,15 +167,15 @@
       "shares": 4400,
       "entry_price": 4.53,
       "entry_date": "2026-08-14",
-      "current_price": 4.73
+      "current_price": 4.53
     },
     {
-      "code": "600547",
-      "name": "XD山东黄",
-      "shares": 500,
-      "entry_price": 35.3,
-      "entry_date": "2026-08-21",
-      "current_price": 35.3
+      "code": "600127",
+      "name": "金健米业",
+      "shares": 1600,
+      "entry_price": 12.04,
+      "entry_date": "2026-08-31",
+      "current_price": 12.04
     }
   ]
 }
