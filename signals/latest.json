@@ -1,6 +1,6 @@
 {
   "date": "2026-08-31",
-  "generated_at": "2026-08-31 15:55:36",
+  "generated_at": "2026-08-31 19:11:57",
   "market_summary": {
     "shanghai": {
       "close": 3986.3,
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 368.5,
-          "pct_change": -1.21,
-          "rsi14": 38.9,
-          "adx14": 13.9
+          "close": 363.55,
+          "pct_change": -1.34,
+          "rsi14": 36.6,
+          "adx14": 15.9
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 368.5,
-          "pct_change": -1.21,
-          "rsi14": 38.9,
-          "adx14": 13.9
+          "close": 363.55,
+          "pct_change": -1.34,
+          "rsi14": 36.6,
+          "adx14": 15.9
         }
       ],
       "name": "宁德时代"
@@ -91,19 +91,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 55.85,
-          "pct_change": -0.04,
-          "rsi14": 65.2,
-          "adx14": 23.2
+          "close": 55.82,
+          "pct_change": -0.05,
+          "rsi14": 64.9,
+          "adx14": 24.4
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 55.85,
-          "pct_change": -0.04,
-          "rsi14": 65.2,
-          "adx14": 23.2
+          "close": 55.82,
+          "pct_change": -0.05,
+          "rsi14": 64.9,
+          "adx14": 24.4
         }
       ],
       "name": "中国平安"
