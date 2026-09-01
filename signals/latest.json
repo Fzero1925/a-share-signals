@@ -1,6 +1,6 @@
 {
   "date": "2026-09-01",
-  "generated_at": "2026-09-01 17:38:17",
+  "generated_at": "2026-09-01 20:05:33",
   "market_summary": {
     "shanghai": {
       "close": 3979.89,
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1299.52,
-          "pct_change": 0.16,
+          "close": 1299.56,
+          "pct_change": 0.0,
           "rsi14": 49.5,
-          "adx14": 16.4
+          "adx14": 15.5
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1299.52,
-          "pct_change": 0.16,
+          "close": 1299.56,
+          "pct_change": 0.0,
           "rsi14": 49.5,
-          "adx14": 16.4
+          "adx14": 15.5
         }
       ],
       "name": "贵州茅台"
@@ -43,19 +43,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.72,
-          "pct_change": 0.6,
-          "rsi14": 66.5,
-          "adx14": 30.2
+          "close": 11.92,
+          "pct_change": 1.71,
+          "rsi14": 71.3,
+          "adx14": 31.8
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "HOLD",
-          "reason": "",
-          "close": 11.72,
-          "pct_change": 0.6,
-          "rsi14": 66.5,
-          "adx14": 30.2
+          "action": "BUY",
+          "reason": "触发买入信号",
+          "close": 11.92,
+          "pct_change": 1.71,
+          "rsi14": 71.3,
+          "adx14": 31.8
         }
       ],
       "name": "平安银行"
@@ -91,19 +91,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 55.82,
-          "pct_change": -0.05,
-          "rsi14": 64.9,
-          "adx14": 24.4
+          "close": 57.23,
+          "pct_change": 2.53,
+          "rsi14": 70.7,
+          "adx14": 26.3
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "HOLD",
-          "reason": "",
-          "close": 55.82,
-          "pct_change": -0.05,
-          "rsi14": 64.9,
-          "adx14": 24.4
+          "action": "BUY",
+          "reason": "触发买入信号",
+          "close": 57.23,
+          "pct_change": 2.53,
+          "rsi14": 70.7,
+          "adx14": 26.3
         }
       ],
       "name": "中国平安"
@@ -115,19 +115,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 40.12,
-          "pct_change": 1.96,
-          "rsi14": 62.0,
-          "adx14": 23.4
+          "close": 40.86,
+          "pct_change": 1.84,
+          "rsi14": 67.2,
+          "adx14": 25.3
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "HOLD",
-          "reason": "",
-          "close": 40.12,
-          "pct_change": 1.96,
-          "rsi14": 62.0,
-          "adx14": 23.4
+          "action": "BUY",
+          "reason": "触发买入信号",
+          "close": 40.86,
+          "pct_change": 1.84,
+          "rsi14": 67.2,
+          "adx14": 25.3
         }
       ],
       "name": "招商银行"
