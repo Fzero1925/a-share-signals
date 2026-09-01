@@ -1,55 +1,43 @@
 {
-  "date": "2026-08-31",
-  "generated_at": "2026-08-31 23:28:21",
+  "date": "2026-09-01",
+  "generated_at": "2026-09-01 20:52:17",
   "strategy": "DailyMomentum",
-  "pool_size": 94,
+  "pool_size": 99,
   "selected": [
     {
-      "code": "600127",
-      "name": "金健米业",
-      "close": 12.04,
+      "code": "600722",
+      "name": "金牛化工",
+      "close": 18.06,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "002396",
+      "name": "星网锐捷",
+      "close": 39.75,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "600664",
+      "name": "哈药股份",
+      "close": 9.49,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "301536",
+      "name": "星宸科技",
+      "close": 133.1,
       "target_amount": 20000.0
     },
     {
       "code": "688300",
       "name": "联瑞新材",
-      "close": 193.0,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "688205",
-      "name": "德科立",
-      "close": 184.77,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "002837",
-      "name": "英维克",
-      "close": 68.21,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "600183",
-      "name": "生益科技",
-      "close": 153.4,
+      "close": 176.16,
       "target_amount": 20000.0
     }
   ],
   "rebalance": {
-    "sold": [
-      {
-        "code": "600547",
-        "price": 37.85
-      }
-    ],
-    "bought": [
-      {
-        "code": "600127",
-        "name": "金健米业",
-        "shares": 1600,
-        "price": 12.04
-      }
-    ],
+    "sold": [],
+    "bought": [],
     "blocked": [
       {
         "code": "603039",
@@ -66,33 +54,41 @@
       {
         "code": "002437",
         "reason": "无行情"
+      },
+      {
+        "code": "600127",
+        "reason": "无行情"
       }
     ],
     "skipped": [
       {
+        "code": "600722",
+        "reason": "现金不足"
+      },
+      {
+        "code": "002396",
+        "reason": "现金不足"
+      },
+      {
+        "code": "600664",
+        "reason": "现金不足"
+      },
+      {
+        "code": "301536",
+        "reason": "现金不足"
+      },
+      {
         "code": "688300",
-        "reason": "现金不足"
-      },
-      {
-        "code": "688205",
-        "reason": "现金不足"
-      },
-      {
-        "code": "002837",
-        "reason": "现金不足"
-      },
-      {
-        "code": "600183",
         "reason": "现金不足"
       }
     ]
   },
   "performance": {
-    "total_equity": 23225.27,
-    "total_return": -0.7677473135999999,
-    "total_profit": -76774.73136,
+    "total_equity": 3961.27,
+    "total_return": -0.9603873136,
+    "total_profit": -96038.73136,
     "cash": 3961.27,
-    "position_value": 19264.0,
+    "position_value": 0,
     "positions": 5,
     "win_trades": 3,
     "loss_trades": 2,
@@ -132,6 +128,12 @@
     {
       "date": "2026-08-31",
       "equity": 23225.27,
+      "cash": 3961.27,
+      "positions": 5
+    },
+    {
+      "date": "2026-09-01",
+      "equity": 3961.27,
       "cash": 3961.27,
       "positions": 5
     }
