@@ -1,14 +1,14 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-08 14:46:31",
+  "generated_at": "2026-09-08 17:12:00",
   "market_summary": {
     "shanghai": {
-      "close": 3939.65,
-      "pct_change": 0.18
+      "close": 3940.55,
+      "pct_change": 0.2
     },
     "shenzhen": {
-      "close": 13700.25,
-      "pct_change": -0.54
+      "close": 13703.21,
+      "pct_change": -0.52
     }
   },
   "signals": [
@@ -43,19 +43,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.7,
-          "pct_change": -1.6,
-          "rsi14": 58.9,
-          "adx14": 36.4
+          "close": 11.78,
+          "pct_change": 0.68,
+          "rsi14": 61.5,
+          "adx14": 36.0
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "SELL",
-          "reason": "触发卖出信号",
-          "close": 11.7,
-          "pct_change": -1.6,
-          "rsi14": 58.9,
-          "adx14": 36.4
+          "action": "HOLD",
+          "reason": "",
+          "close": 11.78,
+          "pct_change": 0.68,
+          "rsi14": 61.5,
+          "adx14": 36.0
         }
       ],
       "name": "平安银行"
@@ -91,19 +91,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 56.36,
-          "pct_change": -3.23,
-          "rsi14": 58.3,
-          "adx14": 32.0
+          "close": 55.7,
+          "pct_change": -1.17,
+          "rsi14": 54.4,
+          "adx14": 31.2
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "SELL",
-          "reason": "触发卖出信号",
-          "close": 56.36,
-          "pct_change": -3.23,
-          "rsi14": 58.3,
-          "adx14": 32.0
+          "action": "HOLD",
+          "reason": "",
+          "close": 55.7,
+          "pct_change": -1.17,
+          "rsi14": 54.4,
+          "adx14": 31.2
         }
       ],
       "name": "中国平安"
