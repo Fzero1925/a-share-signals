@@ -1,43 +1,55 @@
 {
-  "date": "2026-09-04",
-  "generated_at": "2026-09-04 20:25:38",
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10 23:10:34",
   "strategy": "DailyMomentum",
   "pool_size": 96,
   "selected": [
     {
-      "code": "300413",
-      "name": "芒果超媒",
-      "close": 21.25,
+      "code": "000523",
+      "name": "红棉股份",
+      "close": 4.46,
       "target_amount": 20000.0
     },
     {
-      "code": "688205",
-      "name": "德科立",
-      "close": 194.0,
+      "code": "600108",
+      "name": "亚盛集团",
+      "close": 5.25,
       "target_amount": 20000.0
     },
     {
-      "code": "002536",
-      "name": "飞龙股份",
-      "close": 58.26,
+      "code": "603083",
+      "name": "剑桥科技",
+      "close": 234.43,
       "target_amount": 20000.0
     },
     {
-      "code": "600127",
-      "name": "金健米业",
-      "close": 12.3,
+      "code": "600869",
+      "name": "远东股份",
+      "close": 24.1,
       "target_amount": 20000.0
     },
     {
-      "code": "600172",
-      "name": "黄河旋风",
-      "close": 15.79,
+      "code": "000592",
+      "name": "平潭发展",
+      "close": 8.27,
       "target_amount": 20000.0
     }
   ],
   "rebalance": {
-    "sold": [],
-    "bought": [],
+    "sold": [
+      {
+        "code": "600127",
+        "price": 14.0
+      }
+    ],
+    "bought": [
+      {
+        "code": "000523",
+        "name": "红棉股份",
+        "shares": 4400,
+        "price": 4.46
+      }
+    ],
     "blocked": [
       {
         "code": "603039",
@@ -58,33 +70,33 @@
     ],
     "skipped": [
       {
-        "code": "300413",
+        "code": "600108",
         "reason": "现金不足"
       },
       {
-        "code": "688205",
+        "code": "603083",
+        "reason": "资金不足1手"
+      },
+      {
+        "code": "600869",
         "reason": "现金不足"
       },
       {
-        "code": "002536",
-        "reason": "现金不足"
-      },
-      {
-        "code": "600172",
+        "code": "000592",
         "reason": "现金不足"
       }
     ]
   },
   "performance": {
-    "total_equity": 23641.27,
-    "total_return": -0.7635873136,
-    "total_profit": -76358.73136,
-    "cash": 3961.27,
-    "position_value": 19680.0,
+    "total_equity": 26325.42,
+    "total_return": -0.7367457904,
+    "total_profit": -73674.57904,
+    "cash": 6701.42,
+    "position_value": 19624.0,
     "positions": 5,
-    "win_trades": 3,
+    "win_trades": 4,
     "loss_trades": 2,
-    "total_trades": 5
+    "total_trades": 6
   },
   "equity_history": [
     {
@@ -134,6 +146,12 @@
       "equity": 23641.27,
       "cash": 3961.27,
       "positions": 5
+    },
+    {
+      "date": "2026-09-10",
+      "equity": 26325.42,
+      "cash": 6701.42,
+      "positions": 5
     }
   ],
   "positions": [
@@ -170,12 +188,12 @@
       "current_price": 4.53
     },
     {
-      "code": "600127",
-      "name": "金健米业",
-      "shares": 1600,
-      "entry_price": 12.04,
-      "entry_date": "2026-08-31",
-      "current_price": 12.3
+      "code": "000523",
+      "name": "红棉股份",
+      "shares": 4400,
+      "entry_price": 4.46,
+      "entry_date": "2026-09-10",
+      "current_price": 4.46
     }
   ]
 }
