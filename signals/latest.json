@@ -1,14 +1,14 @@
 {
   "date": "2026-09-10",
-  "generated_at": "2026-09-10 14:51:29",
+  "generated_at": "2026-09-10 17:14:51",
   "market_summary": {
     "shanghai": {
-      "close": 3932.56,
-      "pct_change": -0.48
+      "close": 3934.4,
+      "pct_change": -0.43
     },
     "shenzhen": {
-      "close": 13615.92,
-      "pct_change": -0.78
+      "close": 13617.67,
+      "pct_change": -0.77
     }
   },
   "signals": [
@@ -43,18 +43,18 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.7,
-          "pct_change": -0.68,
-          "rsi14": 57.6,
+          "close": 11.85,
+          "pct_change": 1.28,
+          "rsi14": 62.4,
           "adx14": 35.7
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.7,
-          "pct_change": -0.68,
-          "rsi14": 57.6,
+          "close": 11.85,
+          "pct_change": 1.28,
+          "rsi14": 62.4,
           "adx14": 35.7
         }
       ],
@@ -115,19 +115,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 41.0,
-          "pct_change": 0.24,
-          "rsi14": 62.8,
-          "adx14": 35.5
+          "close": 41.57,
+          "pct_change": 1.39,
+          "rsi14": 66.9,
+          "adx14": 36.9
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "持仓中",
-          "close": 41.0,
-          "pct_change": 0.24,
-          "rsi14": 62.8,
-          "adx14": 35.5
+          "close": 41.57,
+          "pct_change": 1.39,
+          "rsi14": 66.9,
+          "adx14": 36.9
         }
       ],
       "name": "招商银行"
