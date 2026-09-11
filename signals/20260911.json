@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-11 17:12:53",
+  "generated_at": "2026-09-11 19:51:10",
   "market_summary": {
     "shanghai": {
       "close": 3888.11,
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1285.13,
-          "pct_change": -0.45,
-          "rsi14": 44.6,
-          "adx14": 14.2
+          "close": 1275.16,
+          "pct_change": -0.78,
+          "rsi14": 41.9,
+          "adx14": 14.1
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1285.13,
-          "pct_change": -0.45,
-          "rsi14": 44.6,
-          "adx14": 14.2
+          "close": 1275.16,
+          "pct_change": -0.78,
+          "rsi14": 41.9,
+          "adx14": 14.1
         }
       ],
       "name": "贵州茅台"
@@ -43,18 +43,18 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.85,
-          "pct_change": 1.28,
-          "rsi14": 62.4,
+          "close": 11.74,
+          "pct_change": -0.93,
+          "rsi14": 57.2,
           "adx14": 35.7
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.85,
-          "pct_change": 1.28,
-          "rsi14": 62.4,
+          "close": 11.74,
+          "pct_change": -0.93,
+          "rsi14": 57.2,
           "adx14": 35.7
         }
       ],
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 338.06,
-          "pct_change": 0.36,
-          "rsi14": 29.0,
-          "adx14": 33.7
+          "close": 330.51,
+          "pct_change": -2.23,
+          "rsi14": 26.1,
+          "adx14": 35.6
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 338.06,
-          "pct_change": 0.36,
-          "rsi14": 29.0,
-          "adx14": 33.7
+          "close": 330.51,
+          "pct_change": -2.23,
+          "rsi14": 26.1,
+          "adx14": 35.6
         }
       ],
       "name": "宁德时代"
