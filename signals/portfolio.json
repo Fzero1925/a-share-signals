@@ -1,55 +1,43 @@
 {
-  "date": "2026-09-10",
-  "generated_at": "2026-09-10 23:10:34",
+  "date": "2026-09-14",
+  "generated_at": "2026-09-15 01:08:19",
   "strategy": "DailyMomentum",
-  "pool_size": 96,
+  "pool_size": 95,
   "selected": [
     {
-      "code": "000523",
-      "name": "红棉股份",
-      "close": 4.46,
+      "code": "002815",
+      "name": "崇达技术",
+      "close": 21.12,
       "target_amount": 20000.0
     },
     {
-      "code": "600108",
-      "name": "亚盛集团",
-      "close": 5.25,
+      "code": "603936",
+      "name": "博敏电子",
+      "close": 22.29,
       "target_amount": 20000.0
     },
     {
-      "code": "603083",
-      "name": "剑桥科技",
-      "close": 234.43,
+      "code": "600127",
+      "name": "金健米业",
+      "close": 14.17,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "600967",
+      "name": "内蒙一机",
+      "close": 14.31,
       "target_amount": 20000.0
     },
     {
       "code": "600869",
       "name": "远东股份",
-      "close": 24.1,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "000592",
-      "name": "平潭发展",
-      "close": 8.27,
+      "close": 24.36,
       "target_amount": 20000.0
     }
   ],
   "rebalance": {
-    "sold": [
-      {
-        "code": "600127",
-        "price": 14.0
-      }
-    ],
-    "bought": [
-      {
-        "code": "000523",
-        "name": "红棉股份",
-        "shares": 4400,
-        "price": 4.46
-      }
-    ],
+    "sold": [],
+    "bought": [],
     "blocked": [
       {
         "code": "603039",
@@ -66,33 +54,41 @@
       {
         "code": "002437",
         "reason": "无行情"
+      },
+      {
+        "code": "000523",
+        "reason": "无行情"
       }
     ],
     "skipped": [
       {
-        "code": "600108",
+        "code": "002815",
         "reason": "现金不足"
       },
       {
-        "code": "603083",
-        "reason": "资金不足1手"
+        "code": "603936",
+        "reason": "现金不足"
+      },
+      {
+        "code": "600127",
+        "reason": "现金不足"
+      },
+      {
+        "code": "600967",
+        "reason": "现金不足"
       },
       {
         "code": "600869",
-        "reason": "现金不足"
-      },
-      {
-        "code": "000592",
         "reason": "现金不足"
       }
     ]
   },
   "performance": {
-    "total_equity": 26325.42,
-    "total_return": -0.7367457904,
-    "total_profit": -73674.57904,
+    "total_equity": 6701.42,
+    "total_return": -0.9329857904,
+    "total_profit": -93298.57904,
     "cash": 6701.42,
-    "position_value": 19624.0,
+    "position_value": 0,
     "positions": 5,
     "win_trades": 4,
     "loss_trades": 2,
@@ -150,6 +146,12 @@
     {
       "date": "2026-09-10",
       "equity": 26325.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-09-14",
+      "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
     }
