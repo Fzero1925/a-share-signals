@@ -1,37 +1,37 @@
 {
-  "date": "2026-09-14",
-  "generated_at": "2026-09-15 01:08:19",
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16 20:53:26",
   "strategy": "DailyMomentum",
-  "pool_size": 95,
+  "pool_size": 90,
   "selected": [
     {
-      "code": "002815",
-      "name": "崇达技术",
-      "close": 21.12,
+      "code": "000823",
+      "name": "超声电子",
+      "close": 25.12,
       "target_amount": 20000.0
     },
     {
-      "code": "603936",
-      "name": "博敏电子",
-      "close": 22.29,
+      "code": "002579",
+      "name": "中京电子",
+      "close": 19.65,
       "target_amount": 20000.0
     },
     {
-      "code": "600127",
-      "name": "金健米业",
-      "close": 14.17,
+      "code": "002585",
+      "name": "双星新材",
+      "close": 12.17,
       "target_amount": 20000.0
     },
     {
-      "code": "600967",
-      "name": "内蒙一机",
-      "close": 14.31,
+      "code": "603186",
+      "name": "华正新材",
+      "close": 253.99,
       "target_amount": 20000.0
     },
     {
-      "code": "600869",
-      "name": "远东股份",
-      "close": 24.36,
+      "code": "300903",
+      "name": "科翔股份",
+      "close": 111.95,
       "target_amount": 20000.0
     }
   ],
@@ -62,23 +62,23 @@
     ],
     "skipped": [
       {
-        "code": "002815",
+        "code": "000823",
         "reason": "现金不足"
       },
       {
-        "code": "603936",
+        "code": "002579",
         "reason": "现金不足"
       },
       {
-        "code": "600127",
+        "code": "002585",
         "reason": "现金不足"
       },
       {
-        "code": "600967",
-        "reason": "现金不足"
+        "code": "603186",
+        "reason": "资金不足1手"
       },
       {
-        "code": "600869",
+        "code": "300903",
         "reason": "现金不足"
       }
     ]
@@ -151,6 +151,12 @@
     },
     {
       "date": "2026-09-14",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-09-16",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
