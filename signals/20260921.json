@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21 15:27:24",
+  "generated_at": "2026-09-21 18:15:43",
   "market_summary": {
     "shanghai": {
       "close": 3949.91,
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1257.12,
-          "pct_change": -0.78,
-          "rsi14": 38.5,
-          "adx14": 15.8
+          "close": 1252.57,
+          "pct_change": -0.36,
+          "rsi14": 37.3,
+          "adx14": 16.6
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1257.12,
-          "pct_change": -0.78,
-          "rsi14": 38.5,
-          "adx14": 15.8
+          "close": 1252.57,
+          "pct_change": -0.36,
+          "rsi14": 37.3,
+          "adx14": 16.6
         }
       ],
       "name": "贵州茅台"
@@ -43,19 +43,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.7,
-          "pct_change": 0.78,
-          "rsi14": 53.6,
-          "adx14": 31.6
+          "close": 11.73,
+          "pct_change": 0.26,
+          "rsi14": 54.7,
+          "adx14": 30.7
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.7,
-          "pct_change": 0.78,
-          "rsi14": 53.6,
-          "adx14": 31.6
+          "close": 11.73,
+          "pct_change": 0.26,
+          "rsi14": 54.7,
+          "adx14": 30.7
         }
       ],
       "name": "平安银行"
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 301.95,
-          "pct_change": -0.77,
-          "rsi14": 21.4,
-          "adx14": 43.3
+          "close": 297.1,
+          "pct_change": -1.61,
+          "rsi14": 20.2,
+          "adx14": 45.1
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 301.95,
-          "pct_change": -0.77,
-          "rsi14": 21.4,
-          "adx14": 43.3
+          "close": 297.1,
+          "pct_change": -1.61,
+          "rsi14": 20.2,
+          "adx14": 45.1
         }
       ],
       "name": "宁德时代"
