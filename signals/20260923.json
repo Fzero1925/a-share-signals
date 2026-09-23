@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23 17:36:35",
+  "generated_at": "2026-09-23 20:17:42",
   "market_summary": {
     "shanghai": {
       "close": 3936.52,
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 304.63,
-          "pct_change": 2.53,
-          "rsi14": 27.1,
-          "adx14": 46.0
+          "close": 301.0,
+          "pct_change": -1.19,
+          "rsi14": 26.0,
+          "adx14": 46.9
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 304.63,
-          "pct_change": 2.53,
-          "rsi14": 27.1,
-          "adx14": 46.0
+          "close": 301.0,
+          "pct_change": -1.19,
+          "rsi14": 26.0,
+          "adx14": 46.9
         }
       ],
       "name": "宁德时代"
@@ -91,19 +91,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 54.46,
-          "pct_change": 0.89,
-          "rsi14": 52.8,
-          "adx14": 19.4
+          "close": 53.87,
+          "pct_change": -1.08,
+          "rsi14": 48.8,
+          "adx14": 18.1
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 54.46,
-          "pct_change": 0.89,
-          "rsi14": 52.8,
-          "adx14": 19.4
+          "close": 53.87,
+          "pct_change": -1.08,
+          "rsi14": 48.8,
+          "adx14": 18.1
         }
       ],
       "name": "中国平安"
@@ -115,19 +115,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 40.82,
+          "close": 40.6,
           "pct_change": -0.54,
-          "rsi14": 54.5,
-          "adx14": 36.4
+          "rsi14": 52.0,
+          "adx14": 36.2
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 40.82,
+          "close": 40.6,
           "pct_change": -0.54,
-          "rsi14": 54.5,
-          "adx14": 36.4
+          "rsi14": 52.0,
+          "adx14": 36.2
         }
       ],
       "name": "招商银行"
