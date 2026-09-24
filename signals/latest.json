@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24 20:18:45",
+  "generated_at": "2026-09-24 20:48:31",
   "market_summary": {
     "shanghai": {
       "close": 3888.37,
@@ -43,19 +43,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.351,
-          "pct_change": -0.96,
-          "rsi14": 48.8,
-          "adx14": 28.5
+          "close": 11.3,
+          "pct_change": -0.45,
+          "rsi14": 46.7,
+          "adx14": 27.1
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.351,
-          "pct_change": -0.96,
-          "rsi14": 48.8,
-          "adx14": 28.5
+          "close": 11.3,
+          "pct_change": -0.45,
+          "rsi14": 46.7,
+          "adx14": 27.1
         }
       ],
       "name": "平安银行"
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 301.0,
-          "pct_change": -1.19,
-          "rsi14": 26.0,
-          "adx14": 46.9
+          "close": 293.5,
+          "pct_change": -2.49,
+          "rsi14": 23.7,
+          "adx14": 47.9
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 301.0,
-          "pct_change": -1.19,
-          "rsi14": 26.0,
-          "adx14": 46.9
+          "close": 293.5,
+          "pct_change": -2.49,
+          "rsi14": 23.7,
+          "adx14": 47.9
         }
       ],
       "name": "宁德时代"
