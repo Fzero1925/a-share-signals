@@ -1,6 +1,6 @@
 {
   "date": "2026-09-28",
-  "generated_at": "2026-09-28 16:01:00",
+  "generated_at": "2026-09-28 19:17:32",
   "market_summary": {
     "shanghai": {
       "close": 3823.62,
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1237.0,
-          "pct_change": -1.14,
-          "rsi14": 33.1,
-          "adx14": 17.5
+          "close": 1243.88,
+          "pct_change": 0.56,
+          "rsi14": 36.6,
+          "adx14": 18.4
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1237.0,
-          "pct_change": -1.14,
-          "rsi14": 33.1,
-          "adx14": 17.5
+          "close": 1243.88,
+          "pct_change": 0.56,
+          "rsi14": 36.6,
+          "adx14": 18.4
         }
       ],
       "name": "贵州茅台"
@@ -44,18 +44,18 @@
           "action": "HOLD",
           "reason": "",
           "close": 11.3,
-          "pct_change": -0.45,
+          "pct_change": 0.0,
           "rsi14": 46.7,
-          "adx14": 27.1
+          "adx14": 25.6
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
           "close": 11.3,
-          "pct_change": -0.45,
+          "pct_change": 0.0,
           "rsi14": 46.7,
-          "adx14": 27.1
+          "adx14": 25.6
         }
       ],
       "name": "平安银行"
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 293.5,
-          "pct_change": -2.49,
-          "rsi14": 23.7,
-          "adx14": 47.9
+          "close": 291.99,
+          "pct_change": -0.51,
+          "rsi14": 23.2,
+          "adx14": 49.1
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 293.5,
-          "pct_change": -2.49,
-          "rsi14": 23.7,
-          "adx14": 47.9
+          "close": 291.99,
+          "pct_change": -0.51,
+          "rsi14": 23.2,
+          "adx14": 49.1
         }
       ],
       "name": "宁德时代"
