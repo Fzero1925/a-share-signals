@@ -1,37 +1,37 @@
 {
-  "date": "2026-09-24",
-  "generated_at": "2026-09-24 21:01:13",
+  "date": "2026-09-29",
+  "generated_at": "2026-09-29 22:25:24",
   "strategy": "DailyMomentum",
-  "pool_size": 95,
+  "pool_size": 96,
   "selected": [
     {
-      "code": "600641",
-      "name": "先导基电",
-      "close": 51.56,
+      "code": "600418",
+      "name": "江淮汽车",
+      "close": 26.04,
       "target_amount": 20000.0
     },
     {
       "code": "000560",
       "name": "我爱我家",
-      "close": 3.66,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "688662",
-      "name": "富信科技",
-      "close": 128.28,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "600127",
-      "name": "金健米业",
-      "close": 16.49,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "000002",
-      "name": "万  科Ａ",
       "close": 3.76,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "300207",
+      "name": "欣旺达",
+      "close": 21.5,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "002119",
+      "name": "康强电子",
+      "close": 28.27,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "000592",
+      "name": "平潭发展",
+      "close": 8.74,
       "target_amount": 20000.0
     }
   ],
@@ -62,7 +62,7 @@
     ],
     "skipped": [
       {
-        "code": "600641",
+        "code": "600418",
         "reason": "现金不足"
       },
       {
@@ -70,15 +70,15 @@
         "reason": "现金不足"
       },
       {
-        "code": "688662",
+        "code": "300207",
         "reason": "现金不足"
       },
       {
-        "code": "600127",
+        "code": "002119",
         "reason": "现金不足"
       },
       {
-        "code": "000002",
+        "code": "000592",
         "reason": "现金不足"
       }
     ]
@@ -163,6 +163,12 @@
     },
     {
       "date": "2026-09-24",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-09-29",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
