@@ -1,37 +1,37 @@
 {
-  "date": "2026-09-29",
-  "generated_at": "2026-09-29 22:25:24",
+  "date": "2026-09-30",
+  "generated_at": "2026-09-30 22:12:20",
   "strategy": "DailyMomentum",
-  "pool_size": 96,
+  "pool_size": 95,
   "selected": [
     {
-      "code": "600418",
-      "name": "江淮汽车",
-      "close": 26.04,
+      "code": "000002",
+      "name": "万  科Ａ",
+      "close": 4.26,
       "target_amount": 20000.0
     },
     {
-      "code": "000560",
-      "name": "我爱我家",
-      "close": 3.76,
+      "code": "600418",
+      "name": "江淮汽车",
+      "close": 27.47,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "002487",
+      "name": "大金重工",
+      "close": 46.29,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "600641",
+      "name": "先导基电",
+      "close": 48.57,
       "target_amount": 20000.0
     },
     {
       "code": "300207",
       "name": "欣旺达",
-      "close": 21.5,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "002119",
-      "name": "康强电子",
-      "close": 28.27,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "000592",
-      "name": "平潭发展",
-      "close": 8.74,
+      "close": 22.0,
       "target_amount": 20000.0
     }
   ],
@@ -62,23 +62,23 @@
     ],
     "skipped": [
       {
+        "code": "000002",
+        "reason": "现金不足"
+      },
+      {
         "code": "600418",
         "reason": "现金不足"
       },
       {
-        "code": "000560",
+        "code": "002487",
+        "reason": "现金不足"
+      },
+      {
+        "code": "600641",
         "reason": "现金不足"
       },
       {
         "code": "300207",
-        "reason": "现金不足"
-      },
-      {
-        "code": "002119",
-        "reason": "现金不足"
-      },
-      {
-        "code": "000592",
         "reason": "现金不足"
       }
     ]
@@ -169,6 +169,12 @@
     },
     {
       "date": "2026-09-29",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-09-30",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
