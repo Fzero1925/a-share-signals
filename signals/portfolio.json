@@ -1,37 +1,37 @@
 {
-  "date": "2026-09-30",
-  "generated_at": "2026-09-30 22:12:20",
+  "date": "2026-10-12",
+  "generated_at": "2026-10-13 04:26:11",
   "strategy": "DailyMomentum",
-  "pool_size": 95,
+  "pool_size": 94,
   "selected": [
     {
-      "code": "000002",
-      "name": "万  科Ａ",
-      "close": 4.26,
+      "code": "300133",
+      "name": "华策影视",
+      "close": 9.08,
       "target_amount": 20000.0
     },
     {
-      "code": "600418",
-      "name": "江淮汽车",
-      "close": 27.47,
+      "code": "300450",
+      "name": "先导智能",
+      "close": 37.88,
       "target_amount": 20000.0
     },
     {
-      "code": "002487",
-      "name": "大金重工",
-      "close": 46.29,
+      "code": "300413",
+      "name": "芒果超媒",
+      "close": 24.16,
       "target_amount": 20000.0
     },
     {
-      "code": "600641",
-      "name": "先导基电",
-      "close": 48.57,
+      "code": "300821",
+      "name": "东岳硅材",
+      "close": 17.99,
       "target_amount": 20000.0
     },
     {
-      "code": "300207",
-      "name": "欣旺达",
-      "close": 22.0,
+      "code": "002074",
+      "name": "国轩高科",
+      "close": 30.49,
       "target_amount": 20000.0
     }
   ],
@@ -62,23 +62,23 @@
     ],
     "skipped": [
       {
-        "code": "000002",
+        "code": "300133",
         "reason": "现金不足"
       },
       {
-        "code": "600418",
+        "code": "300450",
         "reason": "现金不足"
       },
       {
-        "code": "002487",
+        "code": "300413",
         "reason": "现金不足"
       },
       {
-        "code": "600641",
+        "code": "300821",
         "reason": "现金不足"
       },
       {
-        "code": "300207",
+        "code": "002074",
         "reason": "现金不足"
       }
     ]
@@ -175,6 +175,12 @@
     },
     {
       "date": "2026-09-30",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-10-12",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
