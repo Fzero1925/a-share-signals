@@ -1,14 +1,14 @@
 {
-  "date": "2026-10-13",
-  "generated_at": "2026-10-13 22:37:09",
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14 14:15:50",
   "market_summary": {
     "shanghai": {
-      "close": 3800.86,
-      "pct_change": 0.1
+      "close": 3775.19,
+      "pct_change": -0.68
     },
     "shenzhen": {
-      "close": 12353.7,
-      "pct_change": -0.25
+      "close": 12152.95,
+      "pct_change": -1.63
     }
   },
   "signals": [
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1288.0,
-          "pct_change": 1.98,
-          "rsi14": 55.8,
-          "adx14": 17.0
+          "close": 1274.89,
+          "pct_change": -1.02,
+          "rsi14": 51.0,
+          "adx14": 17.2
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1288.0,
-          "pct_change": 1.98,
-          "rsi14": 55.8,
-          "adx14": 17.0
+          "close": 1274.89,
+          "pct_change": -1.02,
+          "rsi14": 51.0,
+          "adx14": 17.2
         }
       ],
       "name": "贵州茅台"
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 298.38,
-          "pct_change": 0.21,
-          "rsi14": 35.1,
-          "adx14": 50.0
+          "close": 289.1,
+          "pct_change": -3.11,
+          "rsi14": 31.1,
+          "adx14": 49.4
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 298.38,
-          "pct_change": 0.21,
-          "rsi14": 35.1,
-          "adx14": 50.0
+          "close": 289.1,
+          "pct_change": -3.11,
+          "rsi14": 31.1,
+          "adx14": 49.4
         }
       ],
       "name": "宁德时代"
