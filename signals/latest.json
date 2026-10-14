@@ -1,14 +1,14 @@
 {
   "date": "2026-10-14",
-  "generated_at": "2026-10-14 14:55:37",
+  "generated_at": "2026-10-14 17:48:47",
   "market_summary": {
     "shanghai": {
-      "close": 3768.06,
-      "pct_change": -0.86
+      "close": 3767.23,
+      "pct_change": -0.88
     },
     "shenzhen": {
-      "close": 12117.82,
-      "pct_change": -1.91
+      "close": 12110.59,
+      "pct_change": -1.97
     }
   },
   "signals": [
@@ -43,19 +43,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.57,
-          "pct_change": -1.36,
-          "rsi14": 54.2,
-          "adx14": 29.5
+          "close": 11.5,
+          "pct_change": -0.61,
+          "rsi14": 51.6,
+          "adx14": 29.2
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "HOLD",
-          "reason": "持仓中",
-          "close": 11.57,
-          "pct_change": -1.36,
-          "rsi14": 54.2,
-          "adx14": 29.5
+          "action": "SELL",
+          "reason": "触发卖出信号",
+          "close": 11.5,
+          "pct_change": -0.61,
+          "rsi14": 51.6,
+          "adx14": 29.2
         }
       ],
       "name": "平安银行"
