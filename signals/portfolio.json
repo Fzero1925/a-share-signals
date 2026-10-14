@@ -1,37 +1,37 @@
 {
-  "date": "2026-10-12",
-  "generated_at": "2026-10-13 04:26:11",
+  "date": "2026-10-14",
+  "generated_at": "2026-10-14 21:10:12",
   "strategy": "DailyMomentum",
-  "pool_size": 94,
+  "pool_size": 96,
   "selected": [
     {
-      "code": "300133",
-      "name": "华策影视",
-      "close": 9.08,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "300450",
-      "name": "先导智能",
-      "close": 37.88,
+      "code": "001330",
+      "name": "博纳影业",
+      "close": 7.52,
       "target_amount": 20000.0
     },
     {
       "code": "300413",
       "name": "芒果超媒",
-      "close": 24.16,
+      "close": 25.64,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "600693",
+      "name": "东百集团",
+      "close": 12.19,
       "target_amount": 20000.0
     },
     {
       "code": "300821",
       "name": "东岳硅材",
-      "close": 17.99,
+      "close": 18.01,
       "target_amount": 20000.0
     },
     {
-      "code": "002074",
-      "name": "国轩高科",
-      "close": 30.49,
+      "code": "300182",
+      "name": "捷成股份",
+      "close": 5.89,
       "target_amount": 20000.0
     }
   ],
@@ -62,11 +62,7 @@
     ],
     "skipped": [
       {
-        "code": "300133",
-        "reason": "现金不足"
-      },
-      {
-        "code": "300450",
+        "code": "001330",
         "reason": "现金不足"
       },
       {
@@ -74,11 +70,15 @@
         "reason": "现金不足"
       },
       {
+        "code": "600693",
+        "reason": "现金不足"
+      },
+      {
         "code": "300821",
         "reason": "现金不足"
       },
       {
-        "code": "002074",
+        "code": "300182",
         "reason": "现金不足"
       }
     ]
@@ -181,6 +181,12 @@
     },
     {
       "date": "2026-10-12",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-10-14",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
