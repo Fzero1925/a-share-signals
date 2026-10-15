@@ -1,37 +1,37 @@
 {
-  "date": "2026-10-14",
-  "generated_at": "2026-10-14 21:10:12",
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15 23:46:49",
   "strategy": "DailyMomentum",
-  "pool_size": 96,
+  "pool_size": 97,
   "selected": [
     {
-      "code": "001330",
-      "name": "博纳影业",
-      "close": 7.52,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "300413",
-      "name": "芒果超媒",
-      "close": 25.64,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "600693",
-      "name": "东百集团",
-      "close": 12.19,
+      "code": "603533",
+      "name": "掌阅科技",
+      "close": 29.01,
       "target_amount": 20000.0
     },
     {
       "code": "300821",
       "name": "东岳硅材",
-      "close": 18.01,
+      "close": 18.32,
       "target_amount": 20000.0
     },
     {
-      "code": "300182",
-      "name": "捷成股份",
-      "close": 5.89,
+      "code": "000823",
+      "name": "超声电子",
+      "close": 25.87,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "601857",
+      "name": "中国石油",
+      "close": 12.59,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "002639",
+      "name": "雪人集团",
+      "close": 15.37,
       "target_amount": 20000.0
     }
   ],
@@ -62,15 +62,7 @@
     ],
     "skipped": [
       {
-        "code": "001330",
-        "reason": "现金不足"
-      },
-      {
-        "code": "300413",
-        "reason": "现金不足"
-      },
-      {
-        "code": "600693",
+        "code": "603533",
         "reason": "现金不足"
       },
       {
@@ -78,7 +70,15 @@
         "reason": "现金不足"
       },
       {
-        "code": "300182",
+        "code": "000823",
+        "reason": "现金不足"
+      },
+      {
+        "code": "601857",
+        "reason": "现金不足"
+      },
+      {
+        "code": "002639",
         "reason": "现金不足"
       }
     ]
@@ -187,6 +187,12 @@
     },
     {
       "date": "2026-10-14",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-10-15",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
