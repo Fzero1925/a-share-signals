@@ -1,37 +1,37 @@
 {
-  "date": "2026-10-15",
-  "generated_at": "2026-10-15 23:46:49",
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16 23:32:56",
   "strategy": "DailyMomentum",
   "pool_size": 97,
   "selected": [
     {
-      "code": "603533",
-      "name": "掌阅科技",
-      "close": 29.01,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "300821",
-      "name": "东岳硅材",
-      "close": 18.32,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "000823",
-      "name": "超声电子",
-      "close": 25.87,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "601857",
-      "name": "中国石油",
-      "close": 12.59,
+      "code": "002815",
+      "name": "崇达技术",
+      "close": 23.47,
       "target_amount": 20000.0
     },
     {
       "code": "002639",
       "name": "雪人集团",
-      "close": 15.37,
+      "close": 15.66,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "603533",
+      "name": "掌阅科技",
+      "close": 27.63,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "601328",
+      "name": "交通银行",
+      "close": 8.09,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "300821",
+      "name": "东岳硅材",
+      "close": 17.66,
       "target_amount": 20000.0
     }
   ],
@@ -62,23 +62,23 @@
     ],
     "skipped": [
       {
-        "code": "603533",
-        "reason": "现金不足"
-      },
-      {
-        "code": "300821",
-        "reason": "现金不足"
-      },
-      {
-        "code": "000823",
-        "reason": "现金不足"
-      },
-      {
-        "code": "601857",
+        "code": "002815",
         "reason": "现金不足"
       },
       {
         "code": "002639",
+        "reason": "现金不足"
+      },
+      {
+        "code": "603533",
+        "reason": "现金不足"
+      },
+      {
+        "code": "601328",
+        "reason": "现金不足"
+      },
+      {
+        "code": "300821",
         "reason": "现金不足"
       }
     ]
@@ -193,6 +193,12 @@
     },
     {
       "date": "2026-10-15",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-10-16",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
