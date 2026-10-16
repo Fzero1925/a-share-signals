@@ -1,14 +1,14 @@
 {
   "date": "2026-10-16",
-  "generated_at": "2026-10-16 14:36:06",
+  "generated_at": "2026-10-16 17:22:35",
   "market_summary": {
     "shanghai": {
-      "close": 3691.16,
-      "pct_change": -0.44
+      "close": 3716.28,
+      "pct_change": 0.24
     },
     "shenzhen": {
-      "close": 11745.42,
-      "pct_change": -0.6
+      "close": 11802.46,
+      "pct_change": -0.12
     }
   },
   "signals": [
@@ -43,19 +43,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.41,
-          "pct_change": -0.78,
-          "rsi14": 48.4,
-          "adx14": 27.1
+          "close": 11.5,
+          "pct_change": 0.79,
+          "rsi14": 51.6,
+          "adx14": 25.9
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.41,
-          "pct_change": -0.78,
-          "rsi14": 48.4,
-          "adx14": 27.1
+          "close": 11.5,
+          "pct_change": 0.79,
+          "rsi14": 51.6,
+          "adx14": 25.9
         }
       ],
       "name": "平安银行"
@@ -115,19 +115,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 42.66,
-          "pct_change": -0.02,
-          "rsi14": 67.0,
-          "adx14": 39.7
+          "close": 42.45,
+          "pct_change": -0.49,
+          "rsi14": 63.9,
+          "adx14": 39.2
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "持仓中",
-          "close": 42.66,
-          "pct_change": -0.02,
-          "rsi14": 67.0,
-          "adx14": 39.7
+          "close": 42.45,
+          "pct_change": -0.49,
+          "rsi14": 63.9,
+          "adx14": 39.2
         }
       ],
       "name": "招商银行"
