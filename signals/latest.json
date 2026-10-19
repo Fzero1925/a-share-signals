@@ -1,14 +1,14 @@
 {
-  "date": "2026-10-16",
-  "generated_at": "2026-10-16 23:20:50",
+  "date": "2026-10-19",
+  "generated_at": "2026-10-19 14:20:01",
   "market_summary": {
     "shanghai": {
-      "close": 3716.28,
-      "pct_change": 0.24
+      "close": 3736.74,
+      "pct_change": 0.55
     },
     "shenzhen": {
-      "close": 11802.46,
-      "pct_change": -0.12
+      "close": 11845.92,
+      "pct_change": 0.37
     }
   },
   "signals": [
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1312.97,
-          "pct_change": 2.1,
-          "rsi14": 61.9,
-          "adx14": 18.4
+          "close": 1329.0,
+          "pct_change": 1.22,
+          "rsi14": 65.4,
+          "adx14": 20.1
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "BUY",
-          "reason": "触发买入信号",
-          "close": 1312.97,
-          "pct_change": 2.1,
-          "rsi14": 61.9,
-          "adx14": 18.4
+          "action": "HOLD",
+          "reason": "持仓中",
+          "close": 1329.0,
+          "pct_change": 1.22,
+          "rsi14": 65.4,
+          "adx14": 20.1
         }
       ],
       "name": "贵州茅台"
@@ -91,19 +91,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 51.78,
-          "pct_change": 1.07,
-          "rsi14": 40.9,
-          "adx14": 18.2
+          "close": 51.88,
+          "pct_change": 0.19,
+          "rsi14": 41.6,
+          "adx14": 19.0
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 51.78,
-          "pct_change": 1.07,
-          "rsi14": 40.9,
-          "adx14": 18.2
+          "close": 51.88,
+          "pct_change": 0.19,
+          "rsi14": 41.6,
+          "adx14": 19.0
         }
       ],
       "name": "中国平安"
