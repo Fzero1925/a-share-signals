@@ -1,37 +1,37 @@
 {
-  "date": "2026-10-16",
-  "generated_at": "2026-10-16 23:32:56",
+  "date": "2026-10-20",
+  "generated_at": "2026-10-20 23:50:49",
   "strategy": "DailyMomentum",
-  "pool_size": 97,
+  "pool_size": 89,
   "selected": [
     {
-      "code": "002815",
-      "name": "崇达技术",
-      "close": 23.47,
+      "code": "000823",
+      "name": "超声电子",
+      "close": 25.61,
       "target_amount": 20000.0
     },
     {
-      "code": "002639",
-      "name": "雪人集团",
-      "close": 15.66,
+      "code": "002475",
+      "name": "立讯精密",
+      "close": 47.6,
       "target_amount": 20000.0
     },
     {
-      "code": "603533",
-      "name": "掌阅科技",
-      "close": 27.63,
+      "code": "600487",
+      "name": "亨通光电",
+      "close": 52.07,
       "target_amount": 20000.0
     },
     {
-      "code": "601328",
-      "name": "交通银行",
-      "close": 8.09,
+      "code": "601899",
+      "name": "紫金矿业",
+      "close": 29.06,
       "target_amount": 20000.0
     },
     {
-      "code": "300821",
-      "name": "东岳硅材",
-      "close": 17.66,
+      "code": "603259",
+      "name": "药明康德",
+      "close": 147.66,
       "target_amount": 20000.0
     }
   ],
@@ -62,23 +62,23 @@
     ],
     "skipped": [
       {
-        "code": "002815",
+        "code": "000823",
         "reason": "现金不足"
       },
       {
-        "code": "002639",
+        "code": "002475",
         "reason": "现金不足"
       },
       {
-        "code": "603533",
+        "code": "600487",
         "reason": "现金不足"
       },
       {
-        "code": "601328",
+        "code": "601899",
         "reason": "现金不足"
       },
       {
-        "code": "300821",
+        "code": "603259",
         "reason": "现金不足"
       }
     ]
@@ -199,6 +199,12 @@
     },
     {
       "date": "2026-10-16",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-10-20",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
