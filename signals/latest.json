@@ -1,14 +1,14 @@
 {
-  "date": "2026-10-20",
-  "generated_at": "2026-10-20 23:37:00",
+  "date": "2026-10-21",
+  "generated_at": "2026-10-21 14:07:50",
   "market_summary": {
     "shanghai": {
-      "close": 3735.37,
-      "pct_change": 0.12
+      "close": 3716.43,
+      "pct_change": -0.51
     },
     "shenzhen": {
-      "close": 11801.29,
-      "pct_change": -0.14
+      "close": 11737.75,
+      "pct_change": -0.54
     }
   },
   "signals": [
@@ -115,19 +115,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 43.05,
-          "pct_change": 1.41,
-          "rsi14": 68.4,
-          "adx14": 39.3
+          "close": 42.52,
+          "pct_change": -1.23,
+          "rsi14": 61.2,
+          "adx14": 39.5
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "持仓中",
-          "close": 43.05,
-          "pct_change": 1.41,
-          "rsi14": 68.4,
-          "adx14": 39.3
+          "close": 42.52,
+          "pct_change": -1.23,
+          "rsi14": 61.2,
+          "adx14": 39.5
         }
       ],
       "name": "招商银行"
