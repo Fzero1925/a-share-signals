@@ -1,37 +1,37 @@
 {
-  "date": "2026-10-20",
-  "generated_at": "2026-10-20 23:50:49",
+  "date": "2026-10-23",
+  "generated_at": "2026-10-23 20:55:48",
   "strategy": "DailyMomentum",
   "pool_size": 89,
   "selected": [
     {
-      "code": "000823",
-      "name": "超声电子",
-      "close": 25.61,
+      "code": "603893",
+      "name": "瑞芯微",
+      "close": 214.04,
       "target_amount": 20000.0
     },
     {
-      "code": "002475",
-      "name": "立讯精密",
-      "close": 47.6,
+      "code": "002185",
+      "name": "华天科技",
+      "close": 16.19,
       "target_amount": 20000.0
     },
     {
-      "code": "600487",
-      "name": "亨通光电",
-      "close": 52.07,
+      "code": "300059",
+      "name": "东方财富",
+      "close": 18.55,
       "target_amount": 20000.0
     },
     {
-      "code": "601899",
-      "name": "紫金矿业",
-      "close": 29.06,
+      "code": "600519",
+      "name": "贵州茅台",
+      "close": 1335.0,
       "target_amount": 20000.0
     },
     {
-      "code": "603259",
-      "name": "药明康德",
-      "close": 147.66,
+      "code": "601398",
+      "name": "工商银行",
+      "close": 8.32,
       "target_amount": 20000.0
     }
   ],
@@ -62,23 +62,23 @@
     ],
     "skipped": [
       {
-        "code": "000823",
+        "code": "603893",
+        "reason": "资金不足1手"
+      },
+      {
+        "code": "002185",
         "reason": "现金不足"
       },
       {
-        "code": "002475",
+        "code": "300059",
         "reason": "现金不足"
       },
       {
-        "code": "600487",
-        "reason": "现金不足"
+        "code": "600519",
+        "reason": "资金不足1手"
       },
       {
-        "code": "601899",
-        "reason": "现金不足"
-      },
-      {
-        "code": "603259",
+        "code": "601398",
         "reason": "现金不足"
       }
     ]
@@ -205,6 +205,12 @@
     },
     {
       "date": "2026-10-20",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-10-23",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5

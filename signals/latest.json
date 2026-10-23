@@ -1,6 +1,6 @@
 {
   "date": "2026-10-23",
-  "generated_at": "2026-10-23 20:12:00",
+  "generated_at": "2026-10-23 20:43:49",
   "market_summary": {
     "shanghai": {
       "close": 3690.48,
@@ -67,18 +67,18 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 220.41,
-          "pct_change": -3.29,
-          "rsi14": 14.0,
+          "close": 237.6,
+          "pct_change": 7.8,
+          "rsi14": 26.6,
           "adx14": 54.4
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 220.41,
-          "pct_change": -3.29,
-          "rsi14": 14.0,
+          "close": 237.6,
+          "pct_change": 7.8,
+          "rsi14": 26.6,
           "adx14": 54.4
         }
       ],
