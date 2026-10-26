@@ -1,37 +1,37 @@
 {
-  "date": "2026-10-23",
-  "generated_at": "2026-10-23 20:55:48",
+  "date": "2026-10-26",
+  "generated_at": "2026-10-27 01:27:37",
   "strategy": "DailyMomentum",
-  "pool_size": 89,
+  "pool_size": 94,
   "selected": [
     {
-      "code": "603893",
-      "name": "瑞芯微",
-      "close": 214.04,
+      "code": "688018",
+      "name": "乐鑫科技",
+      "close": 143.33,
       "target_amount": 20000.0
     },
     {
-      "code": "002185",
-      "name": "华天科技",
-      "close": 16.19,
+      "code": "002354",
+      "name": "天娱数科",
+      "close": 8.15,
       "target_amount": 20000.0
     },
     {
-      "code": "300059",
-      "name": "东方财富",
-      "close": 18.55,
+      "code": "688017",
+      "name": "绿的谐波",
+      "close": 293.0,
+      "target_amount": 20000.0
+    },
+    {
+      "code": "300124",
+      "name": "汇川技术",
+      "close": 55.25,
       "target_amount": 20000.0
     },
     {
       "code": "600519",
       "name": "贵州茅台",
-      "close": 1335.0,
-      "target_amount": 20000.0
-    },
-    {
-      "code": "601398",
-      "name": "工商银行",
-      "close": 8.32,
+      "close": 1349.98,
       "target_amount": 20000.0
     }
   ],
@@ -62,24 +62,24 @@
     ],
     "skipped": [
       {
-        "code": "603893",
-        "reason": "资金不足1手"
-      },
-      {
-        "code": "002185",
+        "code": "688018",
         "reason": "现金不足"
       },
       {
-        "code": "300059",
+        "code": "002354",
+        "reason": "现金不足"
+      },
+      {
+        "code": "688017",
+        "reason": "资金不足1手"
+      },
+      {
+        "code": "300124",
         "reason": "现金不足"
       },
       {
         "code": "600519",
         "reason": "资金不足1手"
-      },
-      {
-        "code": "601398",
-        "reason": "现金不足"
       }
     ]
   },
@@ -211,6 +211,12 @@
     },
     {
       "date": "2026-10-23",
+      "equity": 6701.42,
+      "cash": 6701.42,
+      "positions": 5
+    },
+    {
+      "date": "2026-10-26",
       "equity": 6701.42,
       "cash": 6701.42,
       "positions": 5
