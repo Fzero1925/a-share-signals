@@ -1,6 +1,6 @@
 {
   "date": "2026-10-27",
-  "generated_at": "2026-10-27 15:06:00",
+  "generated_at": "2026-10-27 18:06:05",
   "market_summary": {
     "shanghai": {
       "close": 3648.3,
@@ -43,19 +43,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.3,
-          "pct_change": 0.89,
-          "rsi14": 45.5,
-          "adx14": 20.5
+          "close": 11.47,
+          "pct_change": 1.5,
+          "rsi14": 51.5,
+          "adx14": 19.5
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 11.3,
-          "pct_change": 0.89,
-          "rsi14": 45.5,
-          "adx14": 20.5
+          "close": 11.47,
+          "pct_change": 1.5,
+          "rsi14": 51.5,
+          "adx14": 19.5
         }
       ],
       "name": "平安银行"
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 238.0,
-          "pct_change": 0.17,
-          "rsi14": 26.9,
-          "adx14": 54.1
+          "close": 233.0,
+          "pct_change": -2.1,
+          "rsi14": 25.6,
+          "adx14": 53.7
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 238.0,
-          "pct_change": 0.17,
-          "rsi14": 26.9,
-          "adx14": 54.1
+          "close": 233.0,
+          "pct_change": -2.1,
+          "rsi14": 25.6,
+          "adx14": 53.7
         }
       ],
       "name": "宁德时代"
@@ -115,19 +115,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 42.5,
-          "pct_change": 1.75,
-          "rsi14": 59.1,
-          "adx14": 34.4
+          "close": 42.99,
+          "pct_change": 1.15,
+          "rsi14": 62.9,
+          "adx14": 34.1
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 42.5,
-          "pct_change": 1.75,
-          "rsi14": 59.1,
-          "adx14": 34.4
+          "close": 42.99,
+          "pct_change": 1.15,
+          "rsi14": 62.9,
+          "adx14": 34.1
         }
       ],
       "name": "招商银行"
