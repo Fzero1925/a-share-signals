@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "generated_at": "2026-10-29 19:09:03",
+  "generated_at": "2026-10-29 21:46:28",
   "market_summary": {
     "shanghai": {
       "close": 3651.43,
@@ -91,19 +91,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 52.31,
-          "pct_change": -0.57,
-          "rsi14": 48.1,
-          "adx14": 21.5
+          "close": 53.2,
+          "pct_change": 1.7,
+          "rsi14": 54.7,
+          "adx14": 21.2
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 52.31,
-          "pct_change": -0.57,
-          "rsi14": 48.1,
-          "adx14": 21.5
+          "close": 53.2,
+          "pct_change": 1.7,
+          "rsi14": 54.7,
+          "adx14": 21.2
         }
       ],
       "name": "中国平安"
