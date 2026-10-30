@@ -1,14 +1,14 @@
 {
-  "date": "2026-10-29",
-  "generated_at": "2026-10-29 21:46:28",
+  "date": "2026-10-30",
+  "generated_at": "2026-10-30 15:18:10",
   "market_summary": {
     "shanghai": {
-      "close": 3651.43,
-      "pct_change": -0.82
+      "close": 3599.02,
+      "pct_change": -1.44
     },
     "shenzhen": {
-      "close": 11138.2,
-      "pct_change": -2.92
+      "close": 10833.78,
+      "pct_change": -2.73
     }
   },
   "signals": [
@@ -19,18 +19,18 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1330.75,
-          "pct_change": -1.85,
-          "rsi14": 58.0,
+          "close": 1354.0,
+          "pct_change": 1.75,
+          "rsi14": 63.2,
           "adx14": 26.8
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "持仓中",
-          "close": 1330.75,
-          "pct_change": -1.85,
-          "rsi14": 58.0,
+          "close": 1354.0,
+          "pct_change": 1.75,
+          "rsi14": 63.2,
           "adx14": 26.8
         }
       ],
