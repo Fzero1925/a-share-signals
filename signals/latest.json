@@ -1,6 +1,6 @@
 {
   "date": "2026-10-30",
-  "generated_at": "2026-10-30 19:04:19",
+  "generated_at": "2026-10-30 21:38:52",
   "market_summary": {
     "shanghai": {
       "close": 3599.02,
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 229.07,
-          "pct_change": -0.03,
-          "rsi14": 24.6,
-          "adx14": 53.6
+          "close": 232.92,
+          "pct_change": 1.68,
+          "rsi14": 27.8,
+          "adx14": 52.9
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 229.07,
-          "pct_change": -0.03,
-          "rsi14": 24.6,
-          "adx14": 53.6
+          "close": 232.92,
+          "pct_change": 1.68,
+          "rsi14": 27.8,
+          "adx14": 52.9
         }
       ],
       "name": "宁德时代"
