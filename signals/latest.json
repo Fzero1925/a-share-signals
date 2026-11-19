@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-19",
-  "generated_at": "2026-11-19 21:59:07",
+  "date": "2026-11-20",
+  "generated_at": "2026-11-20 00:06:08",
   "market_summary": {
     "shanghai": {
       "close": 3577.62,
@@ -19,18 +19,18 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1442.66,
-          "pct_change": -1.03,
-          "rsi14": 61.5,
+          "close": 1460.21,
+          "pct_change": 1.22,
+          "rsi14": 64.4,
           "adx14": 36.9
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1442.66,
-          "pct_change": -1.03,
-          "rsi14": 61.5,
+          "close": 1460.21,
+          "pct_change": 1.22,
+          "rsi14": 64.4,
           "adx14": 36.9
         }
       ],
@@ -91,19 +91,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 54.4,
-          "pct_change": -0.46,
-          "rsi14": 57.3,
-          "adx14": 15.1
+          "close": 54.66,
+          "pct_change": 0.48,
+          "rsi14": 59.1,
+          "adx14": 14.8
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 54.4,
-          "pct_change": -0.46,
-          "rsi14": 57.3,
-          "adx14": 15.1
+          "close": 54.66,
+          "pct_change": 0.48,
+          "rsi14": 59.1,
+          "adx14": 14.8
         }
       ],
       "name": "中国平安"
@@ -115,18 +115,18 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 43.12,
-          "pct_change": -0.76,
-          "rsi14": 56.4,
+          "close": 43.32,
+          "pct_change": 0.46,
+          "rsi14": 58.4,
           "adx14": 25.0
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 43.12,
-          "pct_change": -0.76,
-          "rsi14": 56.4,
+          "close": 43.32,
+          "pct_change": 0.46,
+          "rsi14": 58.4,
           "adx14": 25.0
         }
       ],
