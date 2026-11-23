@@ -1,6 +1,6 @@
 {
   "date": "2026-11-23",
-  "generated_at": "2026-11-23 17:14:27",
+  "generated_at": "2026-11-23 18:00:47",
   "market_summary": {
     "shanghai": {
       "close": 3538.95,
@@ -91,19 +91,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 55.46,
-          "pct_change": 1.46,
-          "rsi14": 64.2,
-          "adx14": 15.4
+          "close": 53.7,
+          "pct_change": -3.17,
+          "rsi14": 49.6,
+          "adx14": 16.0
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "BUY",
-          "reason": "触发买入信号",
-          "close": 55.46,
-          "pct_change": 1.46,
-          "rsi14": 64.2,
-          "adx14": 15.4
+          "action": "SELL",
+          "reason": "触发卖出信号",
+          "close": 53.7,
+          "pct_change": -3.17,
+          "rsi14": 49.6,
+          "adx14": 16.0
         }
       ],
       "name": "中国平安"
