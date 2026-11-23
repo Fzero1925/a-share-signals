@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-23",
-  "generated_at": "2026-11-23 23:28:25",
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24 02:47:17",
   "market_summary": {
     "shanghai": {
       "close": 3538.95,
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1485.75,
-          "pct_change": 1.75,
-          "rsi14": 68.1,
-          "adx14": 37.4
+          "close": 1439.0,
+          "pct_change": -3.15,
+          "rsi14": 56.4,
+          "adx14": 37.9
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1485.75,
-          "pct_change": 1.75,
-          "rsi14": 68.1,
-          "adx14": 37.4
+          "close": 1439.0,
+          "pct_change": -3.15,
+          "rsi14": 56.4,
+          "adx14": 37.9
         }
       ],
       "name": "贵州茅台"
@@ -67,19 +67,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 227.78,
-          "pct_change": -2.9,
-          "rsi14": 33.4,
-          "adx14": 29.8
+          "close": 227.39,
+          "pct_change": -0.17,
+          "rsi14": 33.2,
+          "adx14": 30.4
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 227.78,
-          "pct_change": -2.9,
-          "rsi14": 33.4,
-          "adx14": 29.8
+          "close": 227.39,
+          "pct_change": -0.17,
+          "rsi14": 33.2,
+          "adx14": 30.4
         }
       ],
       "name": "宁德时代"
@@ -115,19 +115,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 44.0,
-          "pct_change": 1.57,
-          "rsi14": 64.4,
-          "adx14": 25.9
+          "close": 43.26,
+          "pct_change": -1.68,
+          "rsi14": 55.1,
+          "adx14": 26.7
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "BUY",
-          "reason": "触发买入信号",
-          "close": 44.0,
-          "pct_change": 1.57,
-          "rsi14": 64.4,
-          "adx14": 25.9
+          "action": "HOLD",
+          "reason": "持仓中",
+          "close": 43.26,
+          "pct_change": -1.68,
+          "rsi14": 55.1,
+          "adx14": 26.7
         }
       ],
       "name": "招商银行"
