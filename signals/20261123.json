@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23 17:14:27",
+  "market_summary": {
+    "shanghai": {
+      "close": 3538.95,
+      "pct_change": 0.15
+    },
+    "shenzhen": {
+      "close": 10454.37,
+      "pct_change": 1.93
+    }
+  },
+  "signals": [
+    {
+      "code": "600519",
+      "strategies": [
+        {
+          "strategy": "TrendFollowStrategy",
+          "action": "HOLD",
+          "reason": "",
+          "close": 1485.75,
+          "pct_change": 1.75,
+          "rsi14": 68.1,
+          "adx14": 37.4
+        },
+        {
+          "strategy": "MomentumStrategy",
+          "action": "HOLD",
+          "reason": "",
+          "close": 1485.75,
+          "pct_change": 1.75,
+          "rsi14": 68.1,
+          "adx14": 37.4
+        }
+      ],
+      "name": "贵州茅台"
+    },
+    {
+      "code": "000001",
+      "strategies": [
+        {
+          "strategy": "TrendFollowStrategy",
+          "action": "HOLD",
+          "reason": "",
+          "close": 12.34,
+          "pct_change": 0.98,
+          "rsi14": 64.9,
+          "adx14": 23.3
+        },
+        {
+          "strategy": "MomentumStrategy",
+          "action": "HOLD",
+          "reason": "持仓中",
+          "close": 12.34,
+          "pct_change": 0.98,
+          "rsi14": 64.9,
+          "adx14": 23.3
+        }
+      ],
+      "name": "平安银行"
+    },
+    {
+      "code": "300750",
+      "strategies": [
+        {
+          "strategy": "TrendFollowStrategy",
+          "action": "HOLD",
+          "reason": "",
+          "close": 227.78,
+          "pct_change": -2.9,
+          "rsi14": 33.4,
+          "adx14": 29.8
+        },
+        {
+          "strategy": "MomentumStrategy",
+          "action": "HOLD",
+          "reason": "",
+          "close": 227.78,
+          "pct_change": -2.9,
+          "rsi14": 33.4,
+          "adx14": 29.8
+        }
+      ],
+      "name": "宁德时代"
+    },
+    {
+      "code": "601318",
+      "strategies": [
+        {
+          "strategy": "TrendFollowStrategy",
+          "action": "HOLD",
+          "reason": "",
+          "close": 55.46,
+          "pct_change": 1.46,
+          "rsi14": 64.2,
+          "adx14": 15.4
+        },
+        {
+          "strategy": "MomentumStrategy",
+          "action": "BUY",
+          "reason": "触发买入信号",
+          "close": 55.46,
+          "pct_change": 1.46,
+          "rsi14": 64.2,
+          "adx14": 15.4
+        }
+      ],
+      "name": "中国平安"
+    },
+    {
+      "code": "600036",
+      "strategies": [
+        {
+          "strategy": "TrendFollowStrategy",
+          "action": "HOLD",
+          "reason": "",
+          "close": 44.0,
+          "pct_change": 1.57,
+          "rsi14": 64.4,
+          "adx14": 25.9
+        },
+        {
+          "strategy": "MomentumStrategy",
+          "action": "BUY",
+          "reason": "触发买入信号",
+          "close": 44.0,
+          "pct_change": 1.57,
+          "rsi14": 64.4,
+          "adx14": 25.9
+        }
+      ],
+      "name": "招商银行"
+    }
+  ],
+  "failures": []
+}
