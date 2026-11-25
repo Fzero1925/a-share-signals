@@ -1,6 +1,6 @@
 {
   "date": "2026-11-25",
-  "generated_at": "2026-11-25 17:55:56",
+  "generated_at": "2026-11-25 18:43:31",
   "market_summary": {
     "shanghai": {
       "close": 3476.47,
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1460.0,
-          "pct_change": 1.46,
-          "rsi14": 59.8,
-          "adx14": 37.9
+          "close": 1474.84,
+          "pct_change": 1.02,
+          "rsi14": 62.0,
+          "adx14": 38.4
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1460.0,
-          "pct_change": 1.46,
-          "rsi14": 59.8,
-          "adx14": 37.9
+          "close": 1474.84,
+          "pct_change": 1.02,
+          "rsi14": 62.0,
+          "adx14": 38.4
         }
       ],
       "name": "贵州茅台"
@@ -115,19 +115,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 43.52,
-          "pct_change": 0.6,
-          "rsi14": 57.4,
-          "adx14": 26.5
+          "close": 43.2,
+          "pct_change": -0.74,
+          "rsi14": 53.8,
+          "adx14": 26.3
         },
         {
           "strategy": "MomentumStrategy",
-          "action": "HOLD",
-          "reason": "持仓中",
-          "close": 43.52,
-          "pct_change": 0.6,
-          "rsi14": 57.4,
-          "adx14": 26.5
+          "action": "SELL",
+          "reason": "触发卖出信号",
+          "close": 43.2,
+          "pct_change": -0.74,
+          "rsi14": 53.8,
+          "adx14": 26.3
         }
       ],
       "name": "招商银行"
