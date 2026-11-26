@@ -1,6 +1,6 @@
 {
-  "date": "2026-11-26",
-  "generated_at": "2026-11-26 22:33:40",
+  "date": "2026-11-27",
+  "generated_at": "2026-11-27 01:21:16",
   "market_summary": {
     "shanghai": {
       "close": 3476.88,
@@ -19,19 +19,19 @@
           "strategy": "TrendFollowStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1474.84,
-          "pct_change": 1.02,
-          "rsi14": 62.0,
-          "adx14": 38.4
+          "close": 1469.0,
+          "pct_change": -0.4,
+          "rsi14": 60.6,
+          "adx14": 38.8
         },
         {
           "strategy": "MomentumStrategy",
           "action": "HOLD",
           "reason": "",
-          "close": 1474.84,
-          "pct_change": 1.02,
-          "rsi14": 62.0,
-          "adx14": 38.4
+          "close": 1469.0,
+          "pct_change": -0.4,
+          "rsi14": 60.6,
+          "adx14": 38.8
         }
       ],
       "name": "贵州茅台"
